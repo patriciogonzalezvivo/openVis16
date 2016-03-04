@@ -2,7 +2,6 @@
 (function() {
 	if( typeof window.addEventListener === 'function' ) {
 		var hljs_nodes = document.querySelectorAll( 'pre code' );
-		console.log(hljs_nodes);
 
 		for( var i = 0, len = hljs_nodes.length; i < len; i++ ) {
 			var element = hljs_nodes[i];

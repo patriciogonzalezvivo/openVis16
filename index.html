@@ -1,20 +1,20 @@
 <!doctype html>
 <html lang='en'>
 
-	<head>
-		<meta charset='utf-8'>
+    <head>
+        <meta charset='utf-8'>
 
-		<title>Shader the planet</title>
+        <title>Shader the planet</title>
 
-		<meta name='description' content='OpenVis 16 talk about: Enhancing your maps and visualizations with WebGL GLSL Shaders'>
-		<meta name='author' content='Patricio Gonzalez Vivo'>
+        <meta name='description' content='OpenVis 16 talk about: Enhancing your maps and visualizations with WebGL GLSL Shaders'>
+        <meta name='author' content='Patricio Gonzalez Vivo'>
 
-		<meta name='apple-mobile-web-app-capable' content='yes' />
-		<meta name='apple-mobile-web-app-status-bar-style' content='black-translucent' />
+        <meta name='apple-mobile-web-app-capable' content='yes' />
+        <meta name='apple-mobile-web-app-status-bar-style' content='black-translucent' />
 
-		<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui'>
 
-	    <!-- Leaflet -->
+        <!-- Leaflet -->
         <link rel='stylesheet' href='http://cdn.leafletjs.com/leaflet/v1.0.0-beta.2/leaflet.css' />
         <script type='text/javascript' src='http://cdn.leafletjs.com/leaflet/v1.0.0-beta.2/leaflet.js'></script>
 
@@ -28,113 +28,132 @@
         <script type='text/javascript' src='https://rawgit.com/github/fetch/master/fetch.js'></script>
 
         <!-- GLSL Canvas -->
-		<!-- <script type='text/javascript' src='http://localhost:8000/build/GlslCanvas.min.js'></script> -->
-		<script type='text/javascript' src='https://rawgit.com/patriciogonzalezvivo/glslCanvas/master/build/GlslCanvas.min.js'></script>
-		<!-- <link type='text/css' rel='stylesheet' href='https://rawgit.com/patriciogonzalezvivo/glslEditor/gh-pages/build/css/main.css'> -->
-    	<!-- <script type='application/javascript' src='https://rawgit.com/patriciogonzalezvivo/glslEditor/gh-pages/build/js/glslEditor.js'></script> -->
+        <!-- <script type='text/javascript' src='http://localhost:8000/build/GlslCanvas.min.js'></script> -->
+        <script type='text/javascript' src='https://rawgit.com/patriciogonzalezvivo/glslCanvas/master/build/GlslCanvas.min.js'></script>
+        <!-- <link type='text/css' rel='stylesheet' href='https://rawgit.com/patriciogonzalezvivo/glslEditor/gh-pages/build/css/main.css'> -->
+        <!-- <script type='application/javascript' src='https://rawgit.com/patriciogonzalezvivo/glslEditor/gh-pages/build/js/glslEditor.js'></script> -->
 
 
-		<!-- Reveal.js -->
-		<script src='src/reveal/lib/head.min.js'></script>
-		<script src='src/reveal/reveal.js'></script>
-		<link rel='stylesheet' href='css/reveal.css'>
-		<link rel='stylesheet' href='css/github.css'>
+        <!-- Reveal.js -->
+        <script src='src/reveal/lib/head.min.js'></script>
+        <script src='src/reveal/reveal.js'></script>
+        <link rel='stylesheet' href='css/reveal.css'>
+        <link rel='stylesheet' href='css/github.css'>
 
-		<!-- Code syntax highlighting -->
-		<link rel='stylesheet' href='css/style.css'>
+        <!-- Code syntax highlighting -->
+        <link rel='stylesheet' href='css/style.css'>
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/reveal-pdf.css' : 'css/reveal-paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/reveal-pdf.css' : 'css/reveal-paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+    </head>
 
-	<body>
-		<div class='reveal'>
-			<div id='slides' class='slides' >
+    <body>
+        <div class='reveal'>
+            <div id='slides' class='slides' >
 
-				<section data-background='black' data-markdown='00.md'
-			        data-separator="^\n---\n$" 
-			        data-separator-vertical="^\n--\n$"
-			        data-separator-notes='^Note:'  
-			        data-charset='utf-8'>
-				</section>
+                <section data-background='black' data-markdown='00.md'
+                    data-separator='^\n---\n$' 
+                    data-separator-vertical='^\n--\n$'
+                    data-separator-notes='^Note:'
+                    data-element-attributes='{_\s*?([^}]+?)}'
+                    data-charset='utf-8'>
+                </section>
 
-				<section style='width: 100%; height: 100%;' data-background='black' data-state='fullscreen'>
-					<iframe width='100%' height='100%' data-src='http://patriciogonzalezvivo.github.io/RandomCity'></iframe>
-				</section>
+                <section style='width: 100%; height: 100%;' data-background='black' data-state='fullscreen'>
+                    <iframe width='100%' height='100%' data-src='http://patriciogonzalezvivo.github.io/RandomCity'></iframe>
+                </section>
 
-				<section data-markdown='intro.md'  
-			        data-separator="^\n---\n$" 
-			        data-separator-vertical="^\n--\n$"
-			        data-separator-notes='^Note:'  
-			        data-charset='utf-8'
-			        style='width: 100%; height: 100%;'>
-				</section>
+                <section data-markdown='intro.md'  
+                    data-separator='^\n---\n$' 
+                    data-separator-vertical='^\n--\n$'
+                    data-separator-notes='^Note:'  
+                    data-charset='utf-8'
+                    data-element-attributes='{_\s*?([^}]+?)}'
+                    style='width: 100%; height: 100%;'>
+                </section>
 
-				<section data-markdown='what_is_a_shader.md'  
-			        data-separator="^\n---\n$" 
-			        data-separator-vertical="^\n--\n$"
-			        data-separator-notes='^Note:'  
-			        data-charset='utf-8'
-			        style='width: 100%; height: 100%;'>
-				</section>
+                <section data-markdown='what_is_a_shader.md'  
+                    data-separator='^\n---\n$' 
+                    data-separator-vertical='^\n--\n$'
+                    data-separator-notes='^Note:'  
+                    data-charset='utf-8'
+                    data-element-attributes='{_\s*?([^}]+?)}'
+                    style='width: 100%; height: 100%;'>
+                </section>
 
-				<section style='width: 100%; height: 100%;' data-state='fullscreen'>
-					<iframe width='100%' height='100%' data-src='http://thebookofshaders.com'></iframe>
-					<aside class="notes">
-        				On it you will find a friendly guide that walks you through the process of making your own shaders. For it I also made an ecosystem of tools that runs on your browser, natively on your computer on even on a Raspberry Pi.
-						For example let me show you the books's editor so we can see how a shader looks like
-    				</aside>
-				</section>
+                <section style='width: 100%; height: 100%;' data-state='fullscreen'>
+                    <iframe width='100%' height='100%' data-src='http://thebookofshaders.com'></iframe>
+                    <aside class='notes'>
+                        On it you will find a friendly guide that walks you through the process of making your own shaders. For it I also made an ecosystem of tools that runs on your browser, natively on your computer on even on a Raspberry Pi.
+                        For example let me show you the books's editor so we can see how a shader looks like
+                    </aside>
+                </section>
 
-				<section style='width: 100%; height: 100%;' data-background='#36383C'>
-					<iframe width='100%' height='100%' data-src='http://editor.thebookofshaders.com'></iframe>
-					<aside class="notes">
-						This is a single shader. They are atomic and self contain. One **single main function*** execute in parallel for each pixel. Is the Sauron ring of GPUs. 
-						It have some build in functions like: ```gl_FragCoord``` (read only variable that  provides the position of the pixel on the viewport) and ```gl_FragColor``` (write only variable that contain the color of the pixel);
-						Then it have some variables that we can "send" from the CPU that are going to be uniform to all the threats call ```uniforms```. There we are passing the resolution (or dimensions) of the viewport, the mouse position and elipse time. 
-    				</aside>
-				</section>
+                <section style='width: 100%; height: 100%;' data-background='#36383C'>
+                    <iframe width='100%' height='100%' data-src='http://editor.thebookofshaders.com'></iframe>
+                    <aside class='notes'>
+                        This is a single shader. They are atomic and self contain. One **single main function*** execute in parallel for each pixel. Is the Sauron ring of GPUs. 
+                        It have some build in functions like: ```gl_FragCoord``` (read only variable that  provides the position of the pixel on the viewport) and ```gl_FragColor``` (write only variable that contain the color of the pixel);
+                        Then it have some variables that we can 'send' from the CPU that are going to be uniform to all the threats call ```uniforms```. There we are passing the resolution (or dimensions) of the viewport, the mouse position and elipse time. 
+                    </aside>
+                </section>
 
-				<section style='width: 100%; height: 100%;' data-background='#36383C'>
-					<iframe width='100%' height='100%' data-src='http://editor.thebookofshaders.com/?log=160301194012,160301193854,160301191913,160301193806,160229220956,160301191351'></iframe>
-				</section>
-			</div>
-		</div>
+                <section style='width: 100%; height: 100%;' data-background='#36383C'>
+                    <iframe width='100%' height='100%' data-src='http://editor.thebookofshaders.com/?log=160301194012,160301193854,160301191913,160301193806,160229220956,160301191351'></iframe>
+                </section>
 
-		<script>
-			// Full list of configuration options available at:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
+                <section style='width: 100%; height: 100%;' data-background='#36383C'>
+                    <iframe width='100%' height='100%' data-src='http://editor.thebookofshaders.com/?log=160304183535,160229221720,160229221734,160304183610,160304183621,160304183634,160304183646,160304183657'></iframe>
+                </section>
 
-				transition: 'slide',
+                <section style='width: 100%; height: 100%;' data-background='#36383C'>
+                    <iframe width='100%' height='100%' data-src='http://editor.thebookofshaders.com/?log=160226224141,160229183216,160226222825,160301005406,160225221120,160228140742,160225154052'></iframe>
+                </section>              
 
-				// Optional reveal.js plugins
-				dependencies: [
-					{ src: 'src/reveal/lib/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'src/reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'src/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'src/reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'src/reveal/plugin/zoom-js/zoom.js', async: true },
-					{ src: 'src/reveal/plugin/notes/notes.js', async: true }
-				]
-			});
+                <section data-markdown='shaders_in_maps.md'  
+                    data-separator='^\n---\n$' 
+                    data-separator-vertical='^\n--\n$'
+                    data-separator-notes='^Note:'  
+                    data-charset='utf-8'
+                    data-element-attributes='{_\s*?([^}]+?)}'
+                    style='width: 100%; height: 100%;'>
+                </section>
+            </div>
+        </div>
 
-			Reveal.addEventListener('fullscreen', function () {
-				console.log('Fullscreen');
-			    var slide = document.getElementById('slides');
-				slide.style.width = '100%';
-				slide.style.height = '100%';
-			}, false);
-		</script>
-	</body>
+        <script>
+            // Full list of configuration options available at:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                transition: 'slide',
+
+                // Optional reveal.js plugins
+                dependencies: [
+                    { src: 'src/reveal/lib/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'src/reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'src/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'src/reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'src/reveal/plugin/zoom-js/zoom.js', async: true },
+                    { src: 'src/reveal/plugin/notes/notes.js', async: true }
+                ]
+            });
+
+            Reveal.addEventListener('fullscreen', function () {
+                var slide = document.getElementById('slides');
+                slide.style.width = '100%';
+                slide.style.height = '100%';
+            }, false);
+        </script>
+    </body>
 </html>

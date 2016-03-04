@@ -316,96 +316,19 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 	box-shadow: none; 
 }
 
-/*.reveal pre {
-	box-shadow: none;
-}
-
-.reveal pre code{
-    background: white;
-    font-family: "Source Code Pro" , monospace;
-    font-weight: 400;
-    font-size: 12px;
-    color: black;
-    background-color: rgba(255,255,255,0)
-}*/
-
-/*
-Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
-*/
-
 .hljs {
   font-size: 16px;
 }
 
-/*.hljs {
-  display: block;
-  overflow-x: auto;
-  padding: 0.5em;
-  background: #f0f0f0;
-}*/
-/*
-.hljs,
-.hljs-subst,
-.hljs-tag .hljs-title {
-  color: black;
+.lang-JSON {
+  max-height: 500px;
 }
 
-.hljs-string,
-.hljs-title,
-.hljs-section,
-.hljs-attribute,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-variable,
-.hljs-template-variable,
-.hljs-symbol,
-.hljs-deletion {
-  color: #800;
+.lang-YAML {
+  max-height: 500px;
 }
 
-.hljs-comment,
-.hljs-quote {
-  color: #888;
+.lang-glsl {
+  max-height: 500px;
 }
 
-.hljs-number,
-.hljs-regexp,
-.hljs-literal,
-.hljs-addition,
-.hljs-bullet,
-.hljs-link {
-  color: #080;
-}
-
-.hljs-meta {
-  color: #88f;
-}
-
-.hljs-keyword,
-.hljs-selector-tag,
-.hljs-title,
-.hljs-name,
-.hljs-section,
-.hljs-built_in,
-.hljs-doctag,
-.hljs-type,
-.hljs-strong {
-  font-weight: bold;
-}
-
-.hljs-emphasis {
-  font-style: italic;
-}
-
-.map {
-    background: white;
-}
-
-.reveal .slides {
-  height: 100%;
-  width: 100%;
-  top: 0;
-  margin-top: 0;
-}
-
-*/
