@@ -10,18 +10,14 @@ Hello. my name is Patricio Gonzalez Vivo.
 
 --
 
-![](https://farm8.staticflickr.com/7388/12937668934_9183b4a216_o_d.png)
+![](imgs/IMG_4031.JPG)
 
 Note:
 I’m artist interested in digital landscapes...
 
 --
 
-![](https://farm3.staticflickr.com/2656/13129483945_ae3d52f2e7_o_d.png)
-
---
-
-![](https://farm3.staticflickr.com/2403/13134041954_3a8794f2af_o_d.png)
+![](https://farm8.staticflickr.com/7388/12937668934_9183b4a216_o_d.png)
 
 --
 
@@ -33,17 +29,9 @@ I’m artist interested in digital landscapes...
 
 --
 
-![](https://farm6.staticflickr.com/5498/13923612140_06c6843c75_o_d.png)
-
---
-
 ![](https://farm8.staticflickr.com/7298/14134184803_462bcbfbe7_o_d.png)
 
---
-
-![](https://farm3.staticflickr.com/2936/14114245611_39b03627d3_o_d.png)
-
---
+---
 
 ![](imgs/logo-mapzen.png)
 
@@ -54,21 +42,18 @@ Note:
 
 --
 
-![](https://farm4.staticflickr.com/3859/15155562080_0773ee8a1f_o_d.png)
-
---
 
 ![](https://farm4.staticflickr.com/3923/15164855257_7f16d2b9d4_o_d.png)
 
 --
 
 <!-- .slide: data-background="#000000" -->
-![](https://farm4.staticflickr.com/3925/15351050712_3bbc0d9fc5_o_d.png)
+<iframe src="https://player.vimeo.com/video/128160465?autoplay=1&title=0&byline=0&portrait=0" width="3000px" height="1000px" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 --
 
-<!-- .slide: data-background="#0073B9" -->
-![](https://farm4.staticflickr.com/3908/15353037842_97663db7fd_o_d.png)
+<!-- .slide: data-background="#000000" -->
+![](https://farm4.staticflickr.com/3925/15351050712_3bbc0d9fc5_o_d.png)
 
 --
 
@@ -112,7 +97,7 @@ Note:
 <!-- .slide: data-background="#000000" -->
 ![](https://farm2.staticflickr.com/1486/24175781379_b3b2f26ff7_o_d.png)
 
---
+---
 
 <!-- .slide: data-background="#000000" -->
 # I ♥ 
@@ -131,4 +116,3 @@ They become my main expressive language. I try to do most of my work with them.
 
 Note:
 Today I want to show you why they are so great.
-So… let’s start from the beginning.

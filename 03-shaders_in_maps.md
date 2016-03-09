@@ -1,35 +1,275 @@
 
-![](http://thebookofshaders.com/00/journey.jpg)
+![Journey by the Game Company](http://thebookofshaders.com/00/journey.jpg)
+
+<p style='font-size: 18px; font-style: italic; margin: 0px'>Journey by <strong> The Game Company</strong></p>
 
 Note:
 Shaders are use in a lot different situations, like apps and games.
+How this apply this...
+
+---
+
+<iframe class='fit' width="100%" height="100%" data-src="http://tangrams.github.io/tangram-sandbox/tangram.html?slides/02-tiles.yaml#2/0/0"></iframe>
+
+Note:
+to this?
 At Mapzen we made Tangram, a 2D/3D map engine implemented in both OpenGL ES and WebGL.
 
 ---
 
-<!-- .slide: data-background="#353535" -->
-<iframe <iframe width='1000px' height='600px' data-src='http://tangrams.github.io/tangram-sandbox/tangram.html?styles/patterns'></iframe>
-
-**+** [Edit...](http://tangrams.github.io/tangram-play/?scene=https://rawgit.com/tangrams/tangram-sandbox/gh-pages/styles/patterns.yaml)
+<iframe class='fit' width="100%" height="100%" style='min-height: 1000px;' data-src="http://tangrams.github.io/tangram-sandbox/tangram.html?slides/00-tangram.yaml#15/40.7076/-74.0146"></iframe>
 
 Note:
-It's an interesting engine to work on because it's a hybrid. Is cartography tool with unique characteristic that make it very flexible, to the point that can behave more like 3D Design tools and video games.
+We start by graving the OSM data, divide into tiles in our servers and extruding the height of the buildings on Tangram.js client.
+To then...
 
 --
 
-<!-- .slide: data-background="#45443E" -->
-<iframe <iframe width='1000px' height='600px' data-src='http://tangrams.github.io/tangram-sandbox/tangram.html?styles/pericoli'></iframe>
+CPU
 
-**+** [Edit...](http://tangrams.github.io/tangram-play/?scene=https://cdn.rawgit.com/tangrams/tangram-sandbox/gh-pages/styles/pericoli.yaml)
+![](imgs/CPU.png)
+
+**+** [more information about tangram's styles](https://mapzen.com/documentation/tangram/Styles-Overview/)
 
 Note:
-Before jumping into the shader aspecto of this maps. Is important to know a little more about Tangam and Mapzen's vector tiles.
+This is done in the CPU
 
 ---
 
-<!-- .slide: data-background="#26282C" data-state='fullscreen'-->
-<!-- .slide: data-state='fullscreen'-->
-<iframe width='100%' height='100%' data-src='https://mapzen.com/tangram/play/?scene=https://rawgit.com/tangrams/tangram-sandbox/gh-pages/styles/default.yaml#16.5541666666667/40.70579/-74.01260'></iframe>
+<!-- .slide: data-background="#1D1D1D" -->
+
+<iframe class='fit' width="100%" height="100%" style='min-height: 1000px;' data-src="http://tangrams.github.io/tangram-sandbox/tangram.html?styles/tilt-gotham#15/40.7076/-74.0146"></iframe>
+
+Note:
+we can style them using shaders. :)
+
+It's an interesting **hybrid** engine. Is **cartography tool with extreme flexible capabilities**
+
+Before jumping into the shader aspecto of this maps. Is important to know a little more about Tangam and Mapzen's vector tiles.
+
+--
+
+GPU
+
+![](imgs/GPU.png)
+
+**+** [more information about tangram's main shader pipeline](https://mapzen.com/documentation/tangram/Shaders-Overview/)
+
+Note:
+While this is done in the GPU
+
+--
+
+[Polygon/Lines main **Vertex** Shader](https://github.com/tangrams/tangram/blob/master/src/styles/polygons/polygons_vertex.glsl)
+
+```glsl
+uniform vec2 u_resolution;
+uniform float u_time;
+uniform vec3 u_map_position;
+uniform vec3 u_tile_origin;
+uniform float u_meters_per_pixel;
+uniform float u_device_pixel_ratio;
+
+uniform mat4 u_model;
+uniform mat4 u_modelView;
+uniform mat3 u_normalMatrix;
+
+attribute vec4 a_position;
+attribute vec4 a_color;
+
+// Optional normal attribute, otherwise default to up
+#ifdef TANGRAM_NORMAL_ATTRIBUTE
+    attribute vec3 a_normal;
+    #define TANGRAM_NORMAL a_normal
+#else
+    #define TANGRAM_NORMAL vec3(0., 0., 1.)
+#endif
+
+// Optional dynamic line extrusion
+#ifdef TANGRAM_EXTRUDE_LINES
+    // xy: extrusion direction in xy plane
+    // z:  half-width of line (amount to extrude)
+    // w:  scaling factor for interpolating width between zooms
+    attribute vec4 a_extrude;
+#endif
+
+varying vec4 v_position;
+varying vec3 v_normal;
+varying vec4 v_color;
+varying vec4 worldPosition();
+
+// Optional texture UVs
+#ifdef TANGRAM_TEXTURE_COORDS
+    attribute vec2 a_texcoord;
+    varying vec2 v_texcoord;
+#endif
+
+#if defined(TANGRAM_LIGHTING_VERTEX)
+    varying vec4 v_lighting;
+#endif
+
+#pragma tangram: camera
+#pragma tangram: material
+#pragma tangram: lighting
+#pragma tangram: global
+
+void main() {
+    // Adds vertex shader support for feature selection
+    #pragma tangram: feature-selection-vertex
+
+    // Texture UVs
+    #ifdef TANGRAM_TEXTURE_COORDS
+        v_texcoord = a_texcoord;
+    #endif
+
+    // Position
+    vec4 position = vec4(SHORT(a_position.xyz), 1.);
+
+    #ifdef TANGRAM_EXTRUDE_LINES
+        vec2 extrude = SCALE_8(a_extrude.xy);
+        float width = SHORT(a_extrude.z);
+        float scale = SCALE_8(a_extrude.w);
+
+        // Keep line width constant in screen-space
+        float zscale = u_tile_origin.z - u_map_position.z;
+        width *= pow(2., zscale);
+
+        // Smoothly interpolate line width between zooms
+        width = mix(width, width * scale, -zscale);
+
+        // Modify line width before extrusion
+        #pragma tangram: width
+
+        position.xy += extrude * width;
+    #endif
+
+    // World coordinates for 3d procedural textures
+    worldPosition() = wrapWorldPosition(u_model * position);
+
+    // Adjust for tile and view position
+    position = u_modelView * position;
+
+    // Modify position before camera projection
+    #pragma tangram: position
+
+    // Setup varyings
+    v_position = position;
+    v_normal = normalize(u_normalMatrix * TANGRAM_NORMAL);
+    v_color = a_color;
+
+    // Vertex lighting
+    #if defined(TANGRAM_LIGHTING_VERTEX)
+        vec4 color = a_color;
+        vec3 normal = TANGRAM_NORMAL;
+
+        // Modify normal before lighting
+        #pragma tangram: normal
+
+        // Modify color and material properties before lighting
+        #pragma tangram: color
+
+        v_lighting = calculateLighting(position.xyz, normal, color);
+        v_color = color;
+    #endif
+
+    // Camera
+    cameraProjection(position);
+    applyLayerOrder(SHORT(a_position.w), position);
+
+    gl_Position = position;
+}
+```
+
+[Note the injection points defined through ```pragmas```](https://github.com/tangrams/tangram/tree/master/src/gl/shaders)
+
+Note:
+In this pragmas we are giving the change to the user to inject code. 
+
+--
+
+[Polygon/Lines main **Fragment** Shader](https://github.com/tangrams/tangram/blob/master/src/styles/polygons/polygons_fragment.glsl)
+
+```glsl
+uniform vec2 u_resolution;
+uniform float u_time;
+uniform vec3 u_map_position;
+uniform vec3 u_tile_origin;
+uniform float u_meters_per_pixel;
+uniform float u_device_pixel_ratio;
+
+varying vec4 v_position;
+varying vec3 v_normal;
+varying vec4 v_color;
+varying vec4 worldPosition();
+
+#ifdef TANGRAM_TEXTURE_COORDS
+    varying vec2 v_texcoord;
+#endif
+
+#if defined(TANGRAM_LIGHTING_VERTEX)
+    varying vec4 v_lighting;
+#endif
+
+#pragma tangram: camera
+#pragma tangram: material
+#pragma tangram: lighting
+#pragma tangram: global
+
+void main (void) {
+    vec4 color = v_color;
+    vec3 normal = v_normal;
+
+    #ifdef TANGRAM_MATERIAL_NORMAL_TEXTURE
+        calculateNormal(normal);
+    #endif
+
+    // Modify normal before lighting
+    #pragma tangram: normal
+
+    // Modify color and material properties before lighting
+    #if !defined(TANGRAM_LIGHTING_VERTEX)
+    #pragma tangram: color
+    #endif
+
+    #if defined(TANGRAM_LIGHTING_FRAGMENT)
+        color = calculateLighting(v_position.xyz - u_eye, normal, color);
+    #elif defined(TANGRAM_LIGHTING_VERTEX)
+        color = v_lighting;
+    #endif
+
+    // Modify color after lighting (filter-like effects that don't require a additional render passes)
+    #pragma tangram: filter
+
+    gl_FragColor = color;
+}
+```
+
+[Note the injection points defined through ```pragmas```](https://github.com/tangrams/tangram/tree/master/src/gl/shaders)
+
+Note:
+Here is where it get’s interesting to me, you have the ability to inject GLSL code blocks. See this example
+
+---
+
+<!-- .slide: data-background="#26282C" -->
+
+<iframe class='fit' width='100%' height='100%' style='min-height: 1000px;' data-src='https://mapzen.com/tangram/play/?scene=https://rawgit.com/tangrams/tangram-sandbox/gh-pages/styles/default.yaml#16.5541666666667/40.70579/-74.01260'></iframe>
+
+--
+
+Source
+
+```YAML
+sources:
+    osm:
+        type: TopoJSON
+        url:  //vector.mapzen.com/osm/all/{z}/{x}/{y}.topojson
+ ```
+ 
+ **+** [more information about sources](https://mapzen.com/documentation/tangram/sources/)
+
+Note:
+You specify what's your source in a scene yaml file
 
 --
 
@@ -396,22 +636,6 @@ geoJSON tiles. Note the features kinds
 
 --
 
-Tiles, tiles, tiles
-
-```YAML
-sources:
-    osm:
-        type: TopoJSON
-        url:  //vector.mapzen.com/osm/all/{z}/{x}/{y}.topojson
- ```
- 
- **+** [more information about sources](https://mapzen.com/documentation/tangram/sources/)
-
-Note:
-You specify what's your source in a scene yaml file
-
---
-
 Layers
 
 ```YAML
@@ -459,217 +683,6 @@ layers:
 
 Note:
 Those are filter into layers here... and we explicitly how the geometry should be treated
-
----
-
-CPU
-
-![](imgs/CPU.png)
-
-**+** [more information about tangram's styles](https://mapzen.com/documentation/tangram/Styles-Overview/)
-
-Note:
-Each geometry have his own default shader. 
-
----
-
-GPU
-
-![](imgs/GPU.png)
-
-**+** [more information about tangram's main shader pipeline](https://mapzen.com/documentation/tangram/Shaders-Overview/)
-
-Note:
-This is the more or less what all each default style shader do.
-
---
-
-[Polygon/Lines main **Vertex** Shader](https://github.com/tangrams/tangram/blob/master/src/styles/polygons/polygons_vertex.glsl)
-
-```glsl
-uniform vec2 u_resolution;
-uniform float u_time;
-uniform vec3 u_map_position;
-uniform vec3 u_tile_origin;
-uniform float u_meters_per_pixel;
-uniform float u_device_pixel_ratio;
-
-uniform mat4 u_model;
-uniform mat4 u_modelView;
-uniform mat3 u_normalMatrix;
-
-attribute vec4 a_position;
-attribute vec4 a_color;
-
-// Optional normal attribute, otherwise default to up
-#ifdef TANGRAM_NORMAL_ATTRIBUTE
-    attribute vec3 a_normal;
-    #define TANGRAM_NORMAL a_normal
-#else
-    #define TANGRAM_NORMAL vec3(0., 0., 1.)
-#endif
-
-// Optional dynamic line extrusion
-#ifdef TANGRAM_EXTRUDE_LINES
-    // xy: extrusion direction in xy plane
-    // z:  half-width of line (amount to extrude)
-    // w:  scaling factor for interpolating width between zooms
-    attribute vec4 a_extrude;
-#endif
-
-varying vec4 v_position;
-varying vec3 v_normal;
-varying vec4 v_color;
-varying vec4 worldPosition();
-
-// Optional texture UVs
-#ifdef TANGRAM_TEXTURE_COORDS
-    attribute vec2 a_texcoord;
-    varying vec2 v_texcoord;
-#endif
-
-#if defined(TANGRAM_LIGHTING_VERTEX)
-    varying vec4 v_lighting;
-#endif
-
-#pragma tangram: camera
-#pragma tangram: material
-#pragma tangram: lighting
-#pragma tangram: global
-
-void main() {
-    // Adds vertex shader support for feature selection
-    #pragma tangram: feature-selection-vertex
-
-    // Texture UVs
-    #ifdef TANGRAM_TEXTURE_COORDS
-        v_texcoord = a_texcoord;
-    #endif
-
-    // Position
-    vec4 position = vec4(SHORT(a_position.xyz), 1.);
-
-    #ifdef TANGRAM_EXTRUDE_LINES
-        vec2 extrude = SCALE_8(a_extrude.xy);
-        float width = SHORT(a_extrude.z);
-        float scale = SCALE_8(a_extrude.w);
-
-        // Keep line width constant in screen-space
-        float zscale = u_tile_origin.z - u_map_position.z;
-        width *= pow(2., zscale);
-
-        // Smoothly interpolate line width between zooms
-        width = mix(width, width * scale, -zscale);
-
-        // Modify line width before extrusion
-        #pragma tangram: width
-
-        position.xy += extrude * width;
-    #endif
-
-    // World coordinates for 3d procedural textures
-    worldPosition() = wrapWorldPosition(u_model * position);
-
-    // Adjust for tile and view position
-    position = u_modelView * position;
-
-    // Modify position before camera projection
-    #pragma tangram: position
-
-    // Setup varyings
-    v_position = position;
-    v_normal = normalize(u_normalMatrix * TANGRAM_NORMAL);
-    v_color = a_color;
-
-    // Vertex lighting
-    #if defined(TANGRAM_LIGHTING_VERTEX)
-        vec4 color = a_color;
-        vec3 normal = TANGRAM_NORMAL;
-
-        // Modify normal before lighting
-        #pragma tangram: normal
-
-        // Modify color and material properties before lighting
-        #pragma tangram: color
-
-        v_lighting = calculateLighting(position.xyz, normal, color);
-        v_color = color;
-    #endif
-
-    // Camera
-    cameraProjection(position);
-    applyLayerOrder(SHORT(a_position.w), position);
-
-    gl_Position = position;
-}
-```
-[Note the injection points defined through ```pragmas```](https://github.com/tangrams/tangram/tree/master/src/gl/shaders)
-
-Note:
-In this pragmas we are giving the change to the user to inject code. 
-
---
-
-[Polygon/Lines main **Fragment** Shader](https://github.com/tangrams/tangram/blob/master/src/styles/polygons/polygons_fragment.glsl)
-
-```glsl
-uniform vec2 u_resolution;
-uniform float u_time;
-uniform vec3 u_map_position;
-uniform vec3 u_tile_origin;
-uniform float u_meters_per_pixel;
-uniform float u_device_pixel_ratio;
-
-varying vec4 v_position;
-varying vec3 v_normal;
-varying vec4 v_color;
-varying vec4 worldPosition();
-
-#ifdef TANGRAM_TEXTURE_COORDS
-    varying vec2 v_texcoord;
-#endif
-
-#if defined(TANGRAM_LIGHTING_VERTEX)
-    varying vec4 v_lighting;
-#endif
-
-#pragma tangram: camera
-#pragma tangram: material
-#pragma tangram: lighting
-#pragma tangram: global
-
-void main (void) {
-    vec4 color = v_color;
-    vec3 normal = v_normal;
-
-    #ifdef TANGRAM_MATERIAL_NORMAL_TEXTURE
-        calculateNormal(normal);
-    #endif
-
-    // Modify normal before lighting
-    #pragma tangram: normal
-
-    // Modify color and material properties before lighting
-    #if !defined(TANGRAM_LIGHTING_VERTEX)
-    #pragma tangram: color
-    #endif
-
-    #if defined(TANGRAM_LIGHTING_FRAGMENT)
-        color = calculateLighting(v_position.xyz - u_eye, normal, color);
-    #elif defined(TANGRAM_LIGHTING_VERTEX)
-        color = v_lighting;
-    #endif
-
-    // Modify color after lighting (filter-like effects that don't require a additional render passes)
-    #pragma tangram: filter
-
-    gl_FragColor = color;
-}
-```
-[Note the injection points defined through ```pragmas```](https://github.com/tangrams/tangram/tree/master/src/gl/shaders)
-
-Note:
-Here is where it get’s interesting to me, you have the ability to inject GLSL code blocks. See this example
 
 ---
 

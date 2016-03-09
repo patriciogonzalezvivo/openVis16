@@ -1,3 +1,10 @@
+did you said... **shader?**
+
+Note:
+But... what's a shader?
+
+--
+
 ```glsl
 uniform vec2 u_resolution;
 uniform vec2 u_mouse;
@@ -17,13 +24,6 @@ void main() {
 
 Note:
 Shaders are small “C-like” programs that are execute in parallel in the graphic cards to compute single operations like the position of vertices or the color of a pixel.
-
---
-
-# ??
-
-Note:
-Yeah... right?
 
 --
 
@@ -69,7 +69,7 @@ is **245.760.000** <!-- {_class="fragment"} -->
 --
 
 ![](http://thebookofshaders.com/01/03.jpeg)
-## CPU
+## sad CPU
 
 Note:
 So... this is obviusly inviable.
@@ -98,7 +98,7 @@ Each one of them is connected to a single RGB Led. That's all they have to do. C
 --
 
 ![](http://thebookofshaders.com/01/03.jpeg)
-## CPU
+## sad CPU
 
 Note:
 So now this amount of task pass all at once...

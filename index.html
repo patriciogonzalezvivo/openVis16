@@ -66,7 +66,7 @@
                 </section>
 
                 <section style='width: 100%; height: 100%;' data-background='black' data-state='fullscreen'>
-                    <iframe width='100%' height='100%' data-src='http://patriciogonzalezvivo.github.io/RandomCity'></iframe>
+                    <iframe class='fit' width='100%' height='100%' data-src='http://patriciogonzalezvivo.github.io/RandomCity'></iframe>
                 </section>
 
                 <section data-markdown='01-intro.md'  
@@ -104,7 +104,7 @@
                     </aside>
                 </section>
 
-                <section style='width: 100%; height: 100%;' data-background='#36383C'>
+<!--                 <section style='width: 100%; height: 100%;' data-background='#36383C'>
                     <iframe width='100%' height='100%' data-src='http://editor.thebookofshaders.com/?log=160301194012,160301193854,160301191913,160301193806,160229220956'></iframe>
                 </section>
 
@@ -114,7 +114,7 @@
 
                 <section style='width: 100%; height: 100%;' data-background='#36383C'>
                     <iframe width='100%' height='100%' data-src='http://editor.thebookofshaders.com/?log=160226224141,160229183216,160226222825,160301005406,160225221120,160228140742,160225154052'></iframe>
-                </section>              
+                </section>         -->      
 
                 <section data-markdown='03-shaders_in_maps.md'  
                     data-separator='^\n---\n$' 
@@ -124,6 +124,16 @@
                     data-element-attributes='{_\s*?([^}]+?)}'
                     style='width: 100%; height: 100%;'>
                 </section>
+
+                <section data-markdown='04-what_about_data.md'  
+                    data-separator='^\n---\n$' 
+                    data-separator-vertical='^\n--\n$'
+                    data-separator-notes='^Note:'  
+                    data-charset='utf-8'
+                    data-element-attributes='{_\s*?([^}]+?)}'
+                    style='width: 100%; height: 100%;'>
+                </section>
+
             </div>
         </div>
 
@@ -131,6 +141,9 @@
             // Full list of configuration options available at:
             // https://github.com/hakimel/reveal.js#configuration
             Reveal.initialize({
+                width: '100%',
+                height: '100%',
+                padding: '0px',
                 controls: true,
                 progress: true,
                 history: true,
@@ -149,11 +162,23 @@
                 ]
             });
 
-            Reveal.addEventListener('fullscreen', function () {
-                var slide = document.getElementById('slides');
-                slide.style.width = '100%';
-                slide.style.height = '100%';
-            }, false);
+            // calculate a margin-bottom to leave between .fit images and the bottom (which can be the section's bottom, or the top of a footer)
+            var footer = document.getElementsByTagName('footer')[0];  // assuming all footers use the same font
+            var marginBottom = footer? parseInt(document.defaultView.getComputedStyle(footer, null)['fontSize']) : 30;  // leave a 1em margin
+
+            function checkFit (event) {
+                var section = event.currentSlide || event;
+                var big = section.getElementsByClassName('fit')[0];
+                if (big) {
+                    console.log("Streaching",event);
+                    var slide = document.getElementById('slides');
+                    slide.style.width = '100%';
+                    slide.style.height = '100%';
+                }
+            }
+
+            Reveal.addEventListener('slidechanged', checkFit);
+            Reveal.addEventListener('ready', checkFit);
         </script>
     </body>
 </html>
