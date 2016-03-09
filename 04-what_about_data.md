@@ -238,6 +238,8 @@ This is that shader block in a shader by it own.
 <!-- .slide: data-background="#AFB1B1" -->
 <iframe class='fit' width="95%" height="100%" style='min-height: 1000px;' data-src="http://tangrams.github.io/OWM/"></iframe>
 
+[Tangram & OWM](http://tangrams.github.io/OWM/)
+
 Note:
 The over all result
 
@@ -245,6 +247,8 @@ The over all result
 
 <!-- .slide: data-background="#020303" -->
 <iframe class='fit' width="95%" height="100%" style='min-height: 1000px;' data-src="http://patriciogonzalezvivo.github.io/LineOfSight/"></iframe>
+
+[LineOfSight](http://patriciogonzalezvivo.github.io/LineOfSight/)
 
 Note:
 A more extreme case of this tecnique is this project that I made call Line of Sigth
@@ -258,7 +262,7 @@ Also the position have to be accuratly.
 Note:
 The solution was to pass an array of arrays of colors... which is actually a picture :)
 
---
+---
 
 ```js
 var data = new Data2Image();
@@ -295,6 +299,8 @@ var url = data.getUrl();
 var img = data.getImg();
 ```
 
+[Data2Image](http://tangrams.github.io/data2image/)
+
 Note:
 I got very excited with the posibilities of this technique that I start working on a generalize javascript library to convert data to images in a simple way.
 For example this lines will produce an image that look like this
@@ -310,10 +316,16 @@ If decode the data in a shader we can have back the values
 
 ![](imgs/01.gif)
 
--- 
+--
 
 <!-- .slide: data-background="#36383C" -->
 <iframe class='fit' width="100%" height="100%" style='min-height: 1000px;' data-src="http://tangrams.github.io/data2image/timeline-editor.html"></iframe>
 
 Note:
 More interestinly for my was to be able to make compositions. Patterns that scape an algorithmic approach
+
+---
+
+## Thank you
+
+@patriciogv
