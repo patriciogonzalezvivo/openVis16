@@ -154,6 +154,14 @@ And for the wind we will use a shader... but in order to pass the data to the sh
 
 --
 
+![](http://thebookofshaders.com/03/08.png)
+
+Note:
+This is not a trivil detail. Passing data from the CPU to the GPU is one of the most important the bottle necs of the pipeline.
+So how to do it?
+
+--
+
 <!-- .slide: data-background="#000000" -->
 ![](imgs/prism.jpg)
 

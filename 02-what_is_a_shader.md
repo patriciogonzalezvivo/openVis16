@@ -1,4 +1,4 @@
-did you said... **shader?**
+did you say... **shader?**
 
 Note:
 But... what's a shader?
@@ -53,18 +53,18 @@ It need to calculate every single pixels of it
 --
 
 800px x 600px = 
-**480.000** <!-- {_class="fragment"} -->
+**480,000** <!-- {_class="fragment"} -->
 
 at 60 mHz <!-- {_class="fragment"} -->
-is **28.800.000** <!-- {_class="fragment"} -->
+is **28,800,000** <!-- {_class="fragment"} -->
 
 --
 
 2560x1600 = 
-**4.096.000** <!-- {_class="fragment"} -->
+**4,096,000** <!-- {_class="fragment"} -->
 
 at 60 mHz <!-- {_class="fragment"} -->
-is **245.760.000** <!-- {_class="fragment"} -->
+is **245,760,000** <!-- {_class="fragment"} -->
 
 --
 
