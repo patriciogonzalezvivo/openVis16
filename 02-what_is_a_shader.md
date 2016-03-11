@@ -1,7 +1,15 @@
-did you say... **shader?**
+
+<iframe class='fit' width='100%' height='100%' data-src='http://thebookofshaders.com'></iframe>
 
 Note:
-But... what's a shader?
+One year ago I start a long time project call The book of shaders, my goal with it is to explain what shader are and how they work. Try to share a little of my pasion for it for it. In it I try to present the concept in an friendly and ?? way. Check it out at...
+
+---
+
+What's a **shader?**
+
+Note:
+Let's me give you a quick introduction to shaders from the book...
 
 --
 
@@ -43,7 +51,7 @@ Let's picture it like this...
 --
 
 ![](http://thebookofshaders.com/01/00.jpeg)
-## CPU
+**CPU**
 
 Note:
 Imagine this is your CPU. It's preatty great to do all sort of things. Excecutes complex task one after the other one.
@@ -69,7 +77,7 @@ is **245,760,000** <!-- {_class="fragment"} -->
 --
 
 ![](http://thebookofshaders.com/01/03.jpeg)
-## sad CPU
+sad **CPU**
 
 Note:
 So... this is obviusly inviable.
@@ -92,31 +100,37 @@ Imagine tht you can flash them all at once with the same firmware.
 --
 
 ![](imgs/arduino.png)
+
 Note:
 Each one of them is connected to a single RGB Led. That's all they have to do. Computer the color of something.
 
 --
 
 ![](http://thebookofshaders.com/01/03.jpeg)
-## sad CPU
+
+sad **CPU**
 
 Note:
 So now this amount of task pass all at once...
 
 --
 
-![](http://thebookofshaders.com/01/04.jpeg)
-## GPU
+![](imgs/gpu.jpeg)
+
+happy **GPU**
 
 Note:
 From this smaller pipes... like water in strainer.
-
 I guess in this methaphor this are toilet paper tubes... each pixel task is a ping pong ball.
 Think on that the next time you are in the bathroom :)
+and that's a shader!
 
-... and that's a shader!
+---
 
-Nicolas García Belmonte give a better explanation about the rendering pipeline here last year.
-I preser to concentrate just in fragments shaders... which toilet paper escence we just saw.
+<!-- .slide: data-background="#36383C" -->
+<iframe class='fit' width='100%' height='100%' data-src='http://editor.thebookofshaders.com'></iframe>
 
-If you are interested in learning more about shaders I recomend an online book I have been working on call The Book of Shaders
+Note:
+This is a single shader. They are atomic and self contain. One **single main function*** execute in parallel for each pixel. Is the Sauron ring of GPUs. 
+It have some build in functions like: ```gl_FragCoord``` (read only variable that  provides the position of the pixel on the viewport) and ```gl_FragColor``` (write only variable that contain the color of the pixel);
+Then it have some variables that we can 'send' from the CPU that are going to be uniform to all the threats call ```uniforms```. There we are passing the resolution (or dimensions) of the viewport, the mouse position and elipse time. 

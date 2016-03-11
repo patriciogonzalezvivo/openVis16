@@ -264,36 +264,37 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 /*********************************************
  * NAVIGATION CONTROLS
  *********************************************/
+
 .reveal .controls div.navigate-left, .reveal .controls div.navigate-left.enabled {
-  border-right-color: black; 
-}
-
-.reveal .controls div.navigate-right, .reveal .controls div.navigate-right.enabled {
-  border-left-color: black; 
-}
-
-.reveal .controls div.navigate-up, .reveal .controls div.navigate-up.enabled {
-  border-bottom-color: black; 
-}
-
-.reveal .controls div.navigate-down, .reveal .controls div.navigate-down.enabled {
-  border-top-color: black; 
-}
-
-.reveal .controls div.navigate-left.enabled:hover {
   border-right-color: gray; 
 }
 
-.reveal .controls div.navigate-right.enabled:hover {
-  border-left-color: gray; 
+.reveal .controls div.navigate-right, .reveal .controls div.navigate-right.enabled {
+  border-left-color: gray;
 }
 
-.reveal .controls div.navigate-up.enabled:hover {
+.reveal .controls div.navigate-up, .reveal .controls div.navigate-up.enabled {
   border-bottom-color: gray; 
 }
 
-.reveal .controls div.navigate-down.enabled:hover {
+.reveal .controls div.navigate-down, .reveal .controls div.navigate-down.enabled {
   border-top-color: gray; 
+}
+
+.reveal .controls div.navigate-left.enabled:hover {
+  border-right-color: #85CCC4;
+}
+
+.reveal .controls div.navigate-right.enabled:hover {
+  border-left-color: #85CCC4; 
+}
+
+.reveal .controls div.navigate-up.enabled:hover {
+  border-bottom-color: #85CCC4; 
+}
+
+.reveal .controls div.navigate-down.enabled:hover {
+  border-top-color: #85CCC4; 
 }
 
 /*********************************************

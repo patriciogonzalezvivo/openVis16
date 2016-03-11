@@ -1,6 +1,6 @@
 ## TODOs
 
-[ ] Finish adding structural slides
+[ ] Adding images to slides
 [ ] Clean the slides
 [ ] Rehearse a couple of times
 [ ] Clean and fix Slides
