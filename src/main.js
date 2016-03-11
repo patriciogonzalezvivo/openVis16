@@ -32,7 +32,6 @@ function newSection (event) {
 function checkFit (section) {
     var big = section.getElementsByClassName('fit')[0];
     if (big) {
-        console.log("Streaching",event);
         var slide = document.getElementById('slides');
         slide.style.width = '100%';
         slide.style.height = '100%';
@@ -40,7 +39,7 @@ function checkFit (section) {
 }
 
 function checkSandbox (section) {
-    var list = document.getElementsByClassName("sandbox");
+    var list = document.getElementsByClassName('sandbox');
     if (list.length>0) {
         window.glslCanvases = [];
         for (var i = 0; i < list.length; i++){

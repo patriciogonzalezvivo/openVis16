@@ -206,4 +206,8 @@ More examples of data into images
 
 ## Thank you
 
-@patriciogv
+[patricio.io](http://patricio.io) | [@patriciogv](https://twitter.com/patriciogv)
+
+--
+
+??

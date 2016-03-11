@@ -2,7 +2,7 @@
 
 Patricio Gonzalez Vivo
 
-[patricio.io](http://patricio.io) <span style='font-size: 16px; font-weight: 100;'>|</span> [@patriciogv](https://twitter.com/patriciogv)
+[patricio.io](http://patricio.io) | [@patriciogv](https://twitter.com/patriciogv)
 
 
 Note:
@@ -70,7 +70,7 @@ or follow me at patriciogv
 
 ![](imgs/logo-mapzen.png)
 
-[mapzen.com](http://mapzen.com) <span style='font-size: 16px; font-weight: 100;'>|</span> [@mapzen](https://twitter.com/mapzen)
+[mapzen.com](http://mapzen.com) | [@mapzen](https://twitter.com/mapzen)
 
 Note:
 ...working at Mapzen as a graphic engineer.

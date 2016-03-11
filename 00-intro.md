@@ -27,16 +27,7 @@ But is very limited... for example there is no random. So in order to use this c
 ---
 
 ```glsl
-fract(sin(x)*43758.5453123);
-```
-
-Note:
-For one dimentional random
-
----
-
-```glsl
-fract(sin(dot(xy, vec2(12.9898,78.233)))* 43758.5453123);
+y = fract(sin(x)*43758.5453123);
 ```
 
 Note:

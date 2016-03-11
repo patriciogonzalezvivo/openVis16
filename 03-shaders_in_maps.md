@@ -10,16 +10,15 @@ So, how shaders are applied to maps?
 
 ---
 
-<iframe class='fit' width="100%" height="100%" data-src="http://tangrams.github.io/tangram-sandbox/tangram.html?slides/02-tiles.yaml#2/0/0"></iframe>
+<iframe class='fit' width="100%" height="100%" data-src="tangram.html?styles/tiles#2/0/0"></iframe>
 
 Note:
 Well in Mapzen we have a webGL engine call Tangram.
 It takes vector tiles....
 
-
 ---
 
-<iframe class='fit' width="100%" height="100%" style='min-height: 1000px;' data-src="http://tangrams.github.io/tangram-sandbox/tangram.html?slides/00-tangram.yaml#15/40.7076/-74.0146"></iframe>
+<iframe class='fit' width="100%" height="100%" style='min-height: 1000px;' data-src="tangram.html?styles/tilt-orig#15/40.7076/-74.0146"></iframe>
 
 Note:
 extrude them into geometry
@@ -27,7 +26,7 @@ extrude them into geometry
 ---
 
 <!-- .slide: data-background="#1D1D1D" -->
-<iframe class='fit' width="100%" height="100%" style='min-height: 1000px;' data-src="http://tangrams.github.io/tangram-sandbox/tangram.html?styles/tilt-gotham#15/40.7076/-74.0146"></iframe>
+<iframe class='fit' width="100%" height="100%" style='min-height: 1000px;' data-src="tangram.html?styles/tilt-gotham-orig#15/40.7076/-74.0146"></iframe>
 
 Note:
 and pass to the GPU to render to produce maps like the one I show you at the beginning.
