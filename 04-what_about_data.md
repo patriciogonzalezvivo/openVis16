@@ -70,7 +70,9 @@ When I was making LineOfSight I found my self in the dilema of how to update the
 
 --
 
-<img src='http://thebookofshaders.com/14/muybridge.jpg' height="500px"> <canvas class='sandbox' data-fragment-url='http://thebookofshaders.com/14/texture-sprite.frag' data-textures="http://thebookofshaders.com/14/muybridge.jpg" width='500px' height='500px'></canvas>
+<img src='imgs/muybridge.jpg' height="500px"> <img src='imgs/muybridge.gif' height="500px"> 
+
+more than 24fps
 
 
 Note:
@@ -210,4 +212,3 @@ More examples of data into images
 
 --
 
-??

@@ -35,14 +35,14 @@ Shaders are small “C-like” programs that are execute in parallel in the grap
 
 --
 
-![](http://thebookofshaders.com/00/gutenpress.jpg)
+![](imgs/gutenpress.jpg)
 
 Note:
 Shaders are for computer graphic what the **Gutenberg Press** was for books.
 
 --
 
-![](http://thebookofshaders.com/01/print.png)
+![](imgs/print.png)
 
 Note:
 They free us from the process of making graphics from the single threaten hand of the CPU to speed it up using multiple programable structures that prints one frame in a single cycle.
@@ -50,7 +50,8 @@ Let's picture it like this...
 
 --
 
-![](http://thebookofshaders.com/01/00.jpeg)
+![](imgs/cpu00.jpeg)
+
 **CPU**
 
 Note:
@@ -76,7 +77,8 @@ is **245,760,000** <!-- {_class="fragment"} -->
 
 --
 
-![](http://thebookofshaders.com/01/03.jpeg)
+![](imgs/cpu03.jpeg)
+
 sad **CPU**
 
 Note:
@@ -106,7 +108,7 @@ Each one of them is connected to a single RGB Led. That's all they have to do. C
 
 --
 
-![](http://thebookofshaders.com/01/03.jpeg)
+![](imgs/cpu03.jpeg)
 
 sad **CPU**
 
@@ -117,7 +119,7 @@ So now this amount of task pass all at once...
 
 ![](imgs/gpu.jpeg)
 
-happy **GPU**
+**GPU**
 
 Note:
 From this smaller pipes... like water in strainer.

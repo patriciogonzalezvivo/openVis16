@@ -10,10 +10,36 @@ Hello. my name is Patricio.
 
 --
 
-![](imgs/IMG_4031.JPG)
+![](imgs/efectomariposa.png)
+
+[**Efecto Mariposa** (Butterfly effect)](http://patriciogonzalezvivo.com/2011/efectomariposa/)
 
 Note:
 I'm an artist interested in landscape 
+
+--
+
+![](imgs/flatland.png)
+
+**Flatline**
+
+--
+
+![](imgs/Skyline01.png)
+
+[**Skyline I**](http://patriciogonzalezvivo.com/2014/skylines/skylines.php?v=01)
+
+--
+
+![](imgs/Skyline02.png)
+
+[**Skyline II**](http://patriciogonzalezvivo.com/2014/skylines/skylines.php?v=02)
+
+--
+
+![](imgs/Skyline03.png)
+
+[**Skyline III**](http://patriciogonzalezvivo.com/2014/skylines/skylines.php?v=03)
 
 --
 
@@ -22,41 +48,15 @@ I'm an artist interested in landscape
 ##GLSL
 
 Note:
-width a passion for shaders.
-
---
-
-![](https://farm8.staticflickr.com/7388/12937668934_9183b4a216_o_d.png)
-
-Note:
-This is some of the work I have done this last years...
-
---
-
-![](https://farm8.staticflickr.com/7136/13395574783_2df1f1acb1_o_d.jpg)
-
-Note:
-I have no time today to speak about them...
-
---
-
-![](https://farm3.staticflickr.com/2862/13385172615_229569ebf4_o_d.png)
-
-Note:
-but I want them to apear in the talk...
-
---
-
-![](https://farm8.staticflickr.com/7298/14134184803_462bcbfbe7_o_d.png)
-
-Note:
-you can find more about them in my site
+width a passion for shaders. 
+Which I will share later.
 
 --
 
 **patricio**.io
 
 Note:
+You can find more about them in my site
 patricio.io
 
 --
@@ -78,57 +78,88 @@ I work at Mapzen as a graphic engineer, doing this kind of work...
 
 --
 
+<img src='imgs/labels03.gif' style='max-height: 459px;'> <img src='imgs/labels05.gif' style='max-height: 359px;'>
 
-![](https://farm4.staticflickr.com/3923/15164855257_7f16d2b9d4_o_d.png)
+[Experiments on **3D Labels** (C++)](https://vimeo.com/107190391)
 
 --
+
+<img src='imgs/pointclouds-01a.gif' style='max-height: 359px;'> <img src='imgs/pointclouds-09.png' style='max-height: 359px;'> <img src='imgs/pointclouds-11.gif' style='max-height: 359px;'> <img src='imgs/pointclouds-13.gif' style='max-height: 359px;'>
+
+[Experiment on LIDAR + SfM + OpenStreetMap (Python/C++)](https://mapzen.com/blog/point-clouds)
+
+--
+
+<img src='imgs/tangram.png' style='max-height: 659px;'>
+
+<!-- .slide: data-background="#162029" -->
+Cross implementation of Tangram's Material/Light Systems (OpenGL ES/WebGL)
+
+--
+
+<img src='imgs/press.png' style='max-height: 359px;'> <img src='imgs/patterns.png' style='max-height: 359px;'>
+
+<img src='imgs/crosshatch.png' style='max-height: 359px;'> <img src='imgs/pericoli.png' style='max-height: 359px;'>
+
+[Tangram styles (WebGL)](patriciogonzalezvivo.github.io/tangram-sandbox/)
+
+--
+
+<img src='imgs/tilt-tron.gif' style='max-height: 359px;'> <img src='imgs/tron.png' style='max-height: 359px;'>
+
+<img src='imgs/matrix.png' style='max-height: 359px;'> <img src='imgs/tilt-tron.gif' style='max-height: 359px;'>
 
 <!-- .slide: data-background="#000000" -->
-<iframe src="https://player.vimeo.com/video/128160465?autoplay=1&title=0&byline=0&portrait=0" width="3000px" height="800px" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+[Tangram styles (WebGL)](patriciogonzalezvivo.github.io/tangram-sandbox/)
 
 --
+
+<img src='imgs/tilt-gotham.gif' style='max-height: 359px;'> <img src='imgs/gotham.png' style='max-height: 359px;'>
+
+<img src='imgs/ikeda.gif' style='max-height: 359px;'> <img src='imgs/tilt-ikeda.gif' style='max-height: 359px;'>
 
 <!-- .slide: data-background="#000000" -->
-![](https://farm4.staticflickr.com/3925/15351050712_3bbc0d9fc5_o_d.png)
-
---
-
-<!-- .slide: data-background="#0073B9" -->
-![](https://farm1.staticflickr.com/266/18302022053_8423e22fde_o_d.png)
-
---
-
-<!-- .slide: data-background="#45443E" -->
-![](https://farm6.staticflickr.com/5463/17485203928_a93b82659d_o_d.png)
-
---
-
-<!-- .slide: data-background="#000000" -->
-![](https://farm1.staticflickr.com/382/19123355325_460da74d90_o_d.png)
+[Tangram styles (WebGL)](patriciogonzalezvivo.github.io/tangram-sandbox/)
 
 --
 
 <!-- .slide: data-background="#020513" -->
-![](https://farm1.staticflickr.com/762/22037956149_a0d0ff9d74_o_d.png)
+<img src='imgs/iss00.jpg' style='max-height: 400px;'> <img src='imgs/iss01.jpg' style='max-height: 400px;'>
+
+[ISS from OSM](http://patriciogonzalezvivo.github.io/ISS/)
 
 --
 
-![](https://farm1.staticflickr.com/702/22037956459_46a933dcc7_o_d.png)
+<!-- .slide: data-background="#020303" -->
+
+<img src='imgs/lineofsight.png' style='max-height: 450px;'>
+
+<img src='imgs/lineofsight-03.gif' style='max-height: 250px;'> <img src='imgs/lineofsight-04.gif' style='max-height: 250px;'> <img src='imgs/lineofsight-06.gif' style='max-height: 250px;'>
+
+[Line of Sight](http://patriciogonzalezvivo.github.io/LineOfSight/)
 
 --
 
-![](https://farm1.staticflickr.com/645/23612190110_d422fab9e2_o_d.png)
+![](imgs/terrarium00.png)
+
+Terrarium experiments
 
 --
 
-![](https://farm1.staticflickr.com/781/22963510743_34171bf701_o_d.png)
+![](imgs/terrarium01.png)
+
+Terrarium experiments
 
 --
 
-<!-- .slide: data-background="#000000" -->
-![](https://farm2.staticflickr.com/1595/23848005191_102abc175e_o_d.png)
+**mapzen**.com
+
+Note:
+You can find more about Mapzen in mapzen.com
 
 --
 
-<!-- .slide: data-background="#000000" -->
-<iframe src="https://player.vimeo.com/video/150938503?autoplay=1&title=0&byline=0&portrait=0" width="3000px" height="800px" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+@**mapzen**
+
+Note:
+or follow us at @mapzen
