@@ -160,10 +160,12 @@
                             bMousePressed = true;
                             offset_target[0] = .5;
                             offset_target[1] = 0;
+                            timer = waitFor;
                         });
 
                         map.on('mouseup', function () {
                             bMousePressed = false;
+                            timer = waitFor;
                         });
                     }
                     
@@ -216,7 +218,6 @@
                     offset_target[0] = e.pageX/screen.width;
                     offset_target[1] = e.pageY/screen.height;
                 }
-                timer = waitFor;
             }
 
             // ============================================= Helpers

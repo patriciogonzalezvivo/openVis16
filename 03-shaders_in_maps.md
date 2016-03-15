@@ -25,7 +25,7 @@ extrude them into geometry
 ---
 
 <!-- .slide: data-background="#1D1D1D" -->
-<iframe class='fit' width="100%" height="100%" style='min-height: 1000px;' data-src="tangram.html?style=tilt-gotham-orig#15/40.7076/-74.0146"></iframe>
+<iframe class='fit' width="100%" height="100%" style='min-height: 1000px;' data-src="tangram.html?style=tilt-gotham&animate=true#15/40.7076/-74.0146"></iframe>
 
 Note:
 and pass to the GPU to render to produce maps like the one I show you at the beginning.

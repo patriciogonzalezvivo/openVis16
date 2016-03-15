@@ -78,7 +78,7 @@ I work at Mapzen as a graphic engineer, doing this kind of work...
 
 --
 
-<img src='imgs/labels03.gif' style='max-height: 459px;'> <img src='imgs/labels05.gif' style='max-height: 359px;'>
+<img src='imgs/labels05.gif' style='max-width: 40%;'> <img src='imgs/labels03.gif' style='max-width: 60%;'>
 
 [Experiments on **3D Labels** (C++)](https://vimeo.com/107190391)
 
@@ -90,33 +90,26 @@ I work at Mapzen as a graphic engineer, doing this kind of work...
 
 --
 
-<img src='imgs/tangram.png' style='max-height: 659px;'>
+<img src='imgs/press.png' style='width: 45%;'> <img src='imgs/patterns.png' style='width: 45%;'>
 
-<!-- .slide: data-background="#162029" -->
-Cross implementation of Tangram's Material/Light Systems (OpenGL ES/WebGL)
-
---
-
-<img src='imgs/press.png' style='max-height: 359px;'> <img src='imgs/patterns.png' style='max-height: 359px;'>
-
-<img src='imgs/crosshatch.png' style='max-height: 359px;'> <img src='imgs/pericoli.png' style='max-height: 359px;'>
+<img src='imgs/crosshatch.png' style='width: 45%;'> <img src='imgs/pericoli.png' style='width: 45%;'>
 
 [Tangram styles (WebGL)](patriciogonzalezvivo.github.io/tangram-sandbox/)
 
 --
 
-<img src='imgs/tilt-tron.gif' style='max-height: 359px;'> <img src='imgs/tron.png' style='max-height: 359px;'>
+<img src='imgs/tilt-tron.gif' style='width: 45%'> <img src='imgs/tron.png' style='width: 45%;'>
 
-<img src='imgs/matrix.png' style='max-height: 359px;'> <img src='imgs/tilt-tron.gif' style='max-height: 359px;'>
+<img src='imgs/matrix.png' style='width: 45%;'> <img src='imgs/tilt-tron.gif' style='width: 45%'>
 
 <!-- .slide: data-background="#000000" -->
 [Tangram styles (WebGL)](patriciogonzalezvivo.github.io/tangram-sandbox/)
 
 --
 
-<img src='imgs/tilt-gotham.gif' style='max-height: 359px;'> <img src='imgs/gotham.png' style='max-height: 359px;'>
+<img src='imgs/tilt-gotham.gif' style='width: 45%;'> <img src='imgs/gotham.png' style='width: 45%;'>
 
-<img src='imgs/ikeda.gif' style='max-height: 359px;'> <img src='imgs/tilt-ikeda.gif' style='max-height: 359px;'>
+<img src='imgs/ikeda.gif' style='width: 45%;'> <img src='imgs/tilt-ikeda.gif' style='width: 45%;'>
 
 <!-- .slide: data-background="#000000" -->
 [Tangram styles (WebGL)](patriciogonzalezvivo.github.io/tangram-sandbox/)
@@ -124,7 +117,7 @@ Cross implementation of Tangram's Material/Light Systems (OpenGL ES/WebGL)
 --
 
 <!-- .slide: data-background="#020513" -->
-<img src='imgs/iss00.jpg' style='max-height: 400px;'> <img src='imgs/iss01.jpg' style='max-height: 400px;'>
+<img src='imgs/iss00.jpg' style='width: 46%;'> <img src='imgs/iss01.jpg' style='width: 49%;'>
 
 [ISS from OSM](http://patriciogonzalezvivo.github.io/ISS/)
 
@@ -132,9 +125,9 @@ Cross implementation of Tangram's Material/Light Systems (OpenGL ES/WebGL)
 
 <!-- .slide: data-background="#020303" -->
 
-<img src='imgs/lineofsight.png' style='max-height: 450px;'>
+<img src='imgs/lineofsight-07.png' style='width: 91%;'>
 
-<img src='imgs/lineofsight-03.gif' style='max-height: 250px;'> <img src='imgs/lineofsight-04.gif' style='max-height: 250px;'> <img src='imgs/lineofsight-06.gif' style='max-height: 250px;'>
+<img src='imgs/lineofsight-03.gif' style='width: 30%;'> <img src='imgs/lineofsight-04.gif' style='width: 30%;'> <img src='imgs/lineofsight-06.gif' style='width: 30%;'>
 
 [Line of Sight](http://patriciogonzalezvivo.github.io/LineOfSight/)
 

@@ -3,7 +3,7 @@
 
 # WebGL GLSL Shaders
 
-<canvas class='sandbox' data-fragment-url='shaders/160302022724.frag' width='1200px' height='300px' style='margin: 60px'></canvas>
+<canvas class='sandbox' data-fragment-url='shaders/160302022724.frag' width='1200px' height='300px' style='width: 90%; height: 40%; margin: 60px'></canvas>
 
 <span style='font-size: 16px; font-weight: 100; color: white;'> by </span>  **Patricio Gonzalez Vivo**
 
@@ -14,7 +14,6 @@
 ---
 
 <!-- .slide: data-background="#000000" -->
-<!-- <iframe class='fit' width='100%' height='100%' style='min-height: 1000px;' data-src='http://patriciogonzalezvivo.github.io/RandomCity'></iframe> -->
 <iframe class='fit' width='100%' height='100%' style='min-height: 1000px;' data-src='tangram.html?style=randomCity&animate=true#15/40.7076/-74.0146'></iframe> 
 
 
@@ -42,6 +41,8 @@ For example there is no random. So in order to make this patterns I use this fun
 ```glsl
             float pseudo_random = fract(sin(time) * 43758.5453123);
 ```
+
+<a href="http://thebookofshaders.com/10/" style='font-size: .5em;' target="_blank">**+** information on pseudo random on shaders</a>
 
 Note:
 It's a pseudo random function constructed with the fractional part of a Sine function multiply by a big number.

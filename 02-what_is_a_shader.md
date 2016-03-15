@@ -1,17 +1,21 @@
 
-<iframe class='fit' width='100%' height='100%' data-src='http://thebookofshaders.com'></iframe>
-
-Note:
-One year ago I start a long time project call The book of shaders, my goal with it is to explain what shader are and how they work. Try to share a little of my pasion for it for it. In it I try to present the concept in an friendly and ?? way. Check it out at...
-
----
-
 What's a **shader?**
 
 Note:
-Let's me give you a quick introduction to shaders from the book...
+Enought of introductions... What's a shader?
 
 --
+
+
+---
+
+<iframe class='fit' width='100%' height='100%' data-src='http://thebookofshaders.com'></iframe>
+
+Note:
+One year ago I start a long time project call The book of shaders, my goal with it is to explain what shader are and how they work.
+I'm going to use some the material I use in the book to explain what they are but I highly encorage ppl interested on shaders to take a look to it.
+
+---
 
 ```glsl
 uniform vec2 u_resolution;
@@ -38,14 +42,14 @@ Shaders are small “C-like” programs that are execute in parallel in the grap
 ![](imgs/gutenpress.jpg)
 
 Note:
-Shaders are for computer graphic what the **Gutenberg Press** was for books.
+Shaders are for computer graphic what the **Gutenberg Press** was for books authors.
 
 --
 
 ![](imgs/print.png)
 
 Note:
-They free us from the process of making graphics from the single threaten hand of the CPU to speed it up using multiple programable structures that prints one frame in a single cycle.
+They free us from the **single threated hand of the CPU** with the **multiple parallel process** to do one frame per cycle.
 Let's picture it like this...
 
 --
@@ -61,7 +65,7 @@ It need to calculate every single pixels of it
 
 --
 
-800px x 600px = 
+800x600 px = 
 **480,000** <!-- {_class="fragment"} -->
 
 at 60 mHz <!-- {_class="fragment"} -->
@@ -69,7 +73,7 @@ is **28,800,000** <!-- {_class="fragment"} -->
 
 --
 
-2560x1600 = 
+2560x1600 px = 
 **4,096,000** <!-- {_class="fragment"} -->
 
 at 60 mHz <!-- {_class="fragment"} -->
@@ -84,36 +88,7 @@ sad **CPU**
 Note:
 So... this is obviusly inviable.
 Closely 16 year ago we find a salution to this particular problem.
-Using parallel procesors. Small procesors... like an army of ants
-
---
-
-![](imgs/ArduinoUno.jpg)
-Note:
-Imagine an arduino
-
---
-
-![](imgs/arduinos.png)
-Note:
-Now imagine millons of arduinos. Well you have to imagine better than that... that's only 72 of them.
-Imagine tht you can flash them all at once with the same firmware.
-
---
-
-![](imgs/arduino.png)
-
-Note:
-Each one of them is connected to a single RGB Led. That's all they have to do. Computer the color of something.
-
---
-
-![](imgs/cpu03.jpeg)
-
-sad **CPU**
-
-Note:
-So now this amount of task pass all at once...
+Using parallel procesors. Small procesors...
 
 --
 
@@ -122,15 +97,72 @@ So now this amount of task pass all at once...
 **GPU**
 
 Note:
-From this smaller pipes... like water in strainer.
-I guess in this methaphor this are toilet paper tubes... each pixel task is a ping pong ball.
-Think on that the next time you are in the bathroom :)
-and that's a shader!
+Little pipes very dummy. One next to each other... working independelty.
+Like water in strainer... the stream of task pass through them.
+To picture in this other way.
+Each small tube... is very small procesador. that runs a C-like program
+
+--
+
+![](imgs/ArduinoUno.jpg)
+Note:
+Like an arduino
+
+--
+
+![](imgs/arduinos.png)
+Note:
+Well more like handreds of arduinos. 
+Well you have to imagine better than that... that's only 72 of them.
+Imagine tht you can flash them all at once with the same firmware.
+
+--
+
+![](imgs/arduino.png)
+
+Note:
+Each one of them is connected to a single RGB Led and is responsable of computer the color that LED.
+
+--
+
+![](imgs/gpudiagram00.png)
+
+<!-- .slide: data-transition="fade" -->
+Note:
+running in parallel.
+
+--
+
+![](imgs/gpudiagram01.png)
+
+<!-- .slide: data-transition="fade" -->
+Note:
+Each one of them responsable for the color of a LED
+Imagine the hability to flash them all with a same C program.
+
+--
+
+![](imgs/gpudiagram02.png)
+
+<!-- .slide: data-transition="fade" -->
+Note:
+They also have their own memory that all share
+
+--
+
+<!-- .slide: data-transition="fade" -->
+
+![](imgs/gpudiagram03.png)
+
+Note:
+Imagine this happening away from the CPU. In isolation.
+
+We have just imagine the Graphic Computer unit, it's power and some of their limitations. 
 
 ---
 
 <!-- .slide: data-background="#36383C" -->
-<iframe class='fit' width='100%' height='100%' data-src='http://editor.thebookofshaders.com'></iframe>
+<iframe class='fit' width='100%' height='100%' data-src='editor.html'></iframe>
 
 Note:
 This is a single shader. They are atomic and self contain. One **single main function*** execute in parallel for each pixel. Is the Sauron ring of GPUs. 

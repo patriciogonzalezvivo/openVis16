@@ -193,9 +193,13 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   padding: 20px;
   overflow: auto;
   word-wrap: normal;
-  /*max-height: 400px;*/
-  /*background: #3F3F3F;*/
-  /*color: #DCDCDC; */
+  background: repeating-linear-gradient(
+    -45deg,
+    #EFF2F2,
+    #EFF2F2 10px,
+    #E8EBEB 10px,
+    #E8EBEB 20px
+  );
 }
 
 /* TABLE */
