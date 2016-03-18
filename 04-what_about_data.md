@@ -197,12 +197,38 @@ send us their information of their quimical composition in the light the produce
 
 ---
 
-Better examples of Data2Image
+**~1700** stations  <!-- {_class="fragment"} -->
+**x** **??** days  <!-- {_class="fragment"} -->
+(**???** hs)  <!-- {_class="fragment"} -->
+**=** **??** samples  <!-- {_class="fragment"} -->
 
 Note:
-More examples of data into images
-- Weather data
-- Crazy size something encoded into image
+So I want to show you how eficient this technique can be.
+So I start parsin NOAA METAR's for all the US.
+That's about 1700 stations that report around every hour.
+I have been doing this 
+
+--
+
+![](https://rawgit.com/tangrams/WeatherOverTime/gh-pages/data/data.png)
+
+--
+
+* temperature <!-- {_class="fragment"} -->
+(RED) <!-- {_class="fragment"} -->
+
+* wind speed <!-- {_class="fragment"} -->
+(GREEN) <!-- {_class="fragment"} -->
+
+* wind direction <!-- {_class="fragment"} --> 
+(BLUE) <!-- {_class="fragment"} -->
+
+Note:
+For each record I'm only storing temperature, Wind speed and wind direction
+
+--
+
+<iframe class='fit' width="100%" height="100%" style='min-height: 1000px;' data-src="http://tangrams.github.io/WeatherOverTime/"></iframe>
 
 ---
 
