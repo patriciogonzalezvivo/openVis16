@@ -32,6 +32,9 @@ and pass to the GPU to render to produce maps like the one I show you at the beg
 
 ---
 
+
+
+<!-- .slide: data-background="#26282C" -->
 <iframe class='fit' width="100%" height="100%" style='min-height: 1000px;' data-src="https://mapzen.com/tangram/play/?scene=https://rawgit.com/tangrams/tangram-sandbox/gh-pages/styles/default.yaml"></iframe>
 
 Note:

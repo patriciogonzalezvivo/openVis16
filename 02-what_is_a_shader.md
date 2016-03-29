@@ -13,7 +13,7 @@ Enought of introductions... What's a shader?
 
 Note:
 One year ago I start a long time project call The book of shaders, my goal with it is to explain what shader are and how they work.
-I'm going to use some the material I use in the book to explain what they are but I highly encorage ppl interested on shaders to take a look to it.
+I'm going to use some of the **material** I use in the book to explain what they are but I highly encorage everybody interested on this subject to take a look to it.
 
 ---
 
@@ -35,14 +35,14 @@ void main() {
 ```
 
 Note:
-Shaders are small “C-like” programs that are execute in parallel in the graphic cards to compute single operations like the position of vertices or the color of a pixel.
+Shaders are small “C-like” programs that **executed a main single function in parallel**. Most of the cases they **compute single operations like position of vertices or the color of a pixel**.
 
 --
 
 ![](imgs/gutenpress.jpg)
 
 Note:
-Shaders are for computer graphic what the **Gutenberg Press** was for books authors.
+Shaders are for graphic developer, what the **Gutenberg Press** was for books authors.
 
 --
 
@@ -87,7 +87,7 @@ sad **CPU**
 
 Note:
 So... this is obviusly inviable.
-Closely 16 year ago we find a salution to this particular problem.
+Closely 16 year ago graphic engeneers find a salution to this particular problem.
 Using parallel procesors. Small procesors...
 
 --
@@ -98,7 +98,7 @@ Using parallel procesors. Small procesors...
 
 Note:
 Little pipes very dummy. One next to each other... working independelty.
-Like water in strainer... the stream of task pass through them.
+Like water in **strainer**... the stream of task pass through them.
 To picture in this other way.
 Each small tube... is very small procesador. that runs a C-like program
 
@@ -114,7 +114,7 @@ Like an arduino
 Note:
 Well more like handreds of arduinos. 
 Well you have to imagine better than that... that's only 72 of them.
-Imagine tht you can flash them all at once with the same firmware.
+Imagine that you can flash them all at once with the same firmware.
 
 --
 

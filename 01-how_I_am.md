@@ -6,7 +6,7 @@ Patricio Gonzalez Vivo
 
 
 Note:
-Hello. my name is Patricio.
+My name is Patricio.
 
 --
 
@@ -15,13 +15,16 @@ Hello. my name is Patricio.
 [**Efecto Mariposa** (Butterfly effect)](http://patriciogonzalezvivo.com/2011/efectomariposa/)
 
 Note:
-I'm an artist interested in landscape 
+I'm an artist... 
 
 --
 
 ![](imgs/flatland.png)
 
 **Flatline**
+
+Note:
+...interested in landscape
 
 --
 
@@ -41,6 +44,9 @@ I'm an artist interested in landscape
 
 [**Skyline III**](http://patriciogonzalezvivo.com/2014/skylines/skylines.php?v=03)
 
+Note:
+width a passion for shaders. 
+
 --
 
 # I ♥ 
@@ -48,7 +54,6 @@ I'm an artist interested in landscape
 ##GLSL
 
 Note:
-width a passion for shaders. 
 Which I will share later.
 
 --
@@ -73,14 +78,16 @@ or follow me at patriciogv
 [mapzen.com](http://mapzen.com) | [@mapzen](https://twitter.com/mapzen)
 
 Note:
-...working at Mapzen as a graphic engineer.
-I work at Mapzen as a graphic engineer, doing this kind of work...
+I working at Mapzen as a graphic engineer.
 
 --
 
 <img src='imgs/labels05.gif' style='max-width: 40%;'> <img src='imgs/labels03.gif' style='max-width: 60%;'>
 
 [Experiments on **3D Labels** (C++)](https://vimeo.com/107190391)
+
+Note:
+this are some of some personal project I have done there the last year an a half
 
 --
 
