@@ -197,16 +197,16 @@ send us their information of their quimical composition in the light the produce
 
 ---
 
-**~1700** stations  <!-- {_class="fragment"} -->
-**x** **??** days  <!-- {_class="fragment"} -->
-(**???** hs)  <!-- {_class="fragment"} -->
-**=** **??** samples  <!-- {_class="fragment"} -->
+**~1600** stations  <!-- {_class="fragment"} -->
+**x** **40** days  <!-- {_class="fragment"} -->
+(**960** hs)  <!-- {_class="fragment"} -->
+**=** **1,536,000** samples  <!-- {_class="fragment"} -->
 
 Note:
 So I want to show you how eficient this technique can be.
 So I start parsin NOAA METAR's for all the US.
 That's about 1700 stations that report around every hour.
-I have been doing this 
+I have been doing this
 
 --
 
@@ -228,6 +228,7 @@ For each record I'm only storing temperature, Wind speed and wind direction
 
 --
 
+<!-- .slide: data-background="#A8B3B1" -->
 <iframe class='fit' width="100%" height="100%" style='min-height: 1000px;' data-src="http://tangrams.github.io/WeatherOverTime/"></iframe>
 
 ---
