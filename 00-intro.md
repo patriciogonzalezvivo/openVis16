@@ -4,9 +4,11 @@
 <span style='font-size: 66px; font-weight: 400; color: white; text-transform: uppercase;'> WebGL GLSL Shaders</span>
 
 
+<canvas class='sandbox' data-fragment-url='shaders/1459359692769.frag' width='1000px' height='100px' style='width: 90%; height: 40%; margin: 60px'></canvas>
+
 <!-- <canvas class='sandbox' data-fragment-url='shaders/160302022724.frag' width='1200px' height='300px' style='width: 90%; height: 40%; margin: 60px'></canvas> -->
 
-<div style="margin-top: 100px;">
+<div style="margin-top: 50px;">
 <span style='font-size: 16px; font-weight: 100; color: white;'> by </span>  <span style='font-weight: 300; color: white;'> Patricio Gonzalez Vivo </span> 
 </div>
 
