@@ -67,7 +67,7 @@ to have something moving smoothly need to generate the illusion of animation... 
 
 --
 
-~1500 obj x 24ps = 
+~1500 obj x 24 fps = 
 **36,000** <!-- {_class="fragment"} -->
 
 
@@ -96,7 +96,7 @@ So I can use the Images as the a partiture... like pianola roll
 
 --
 
-![](imgs/texture.png)
+<img class='fit' src='imgs/texture.png' style='height: 600px;'>
 
 Note:
 I can encode the position of moving objects into series of colors, each satellite (which have a geometry... ) will read a different line of this partiture.
@@ -209,6 +209,12 @@ For each record I'm only storing temperature, Wind speed and wind direction
 
 <!-- .slide: data-background="#A8B3B1" -->
 <iframe class='fit' width="100%" height="100%" style='min-height: 1000px;' data-src="http://tangrams.github.io/WeatherOverTime/"></iframe>
+
+---
+
+[patriciogonzalezvivo.github.io/**openVis16**](http://patriciogonzalezvivo.github.io/openVis16/)
+
+--
 
 ---
 
