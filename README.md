@@ -1,10 +1,9 @@
 ## TODOs
 
-[ ] Adding images to slides
 [ ] Clean the slides
 [ ] Rehearse a couple of times
 [ ] Clean and fix Slides
-[ ] SelfContain, remove calls to tangram-sandbox
+[ ] SelfContain, add tiles
 [ ] Style
 [ ] Rehearse a couple of times
 [ ] Make Reveal.js plugings and embebed as much as you can 

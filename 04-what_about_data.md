@@ -182,7 +182,7 @@ void main () {
 --
 
 <!-- .slide: data-background="#000000" -->
-![](imgs/galaxy.jpg)
+![](imgs/galaxy0.jpg)
 
 Note:
 In the same way stars from far far away
