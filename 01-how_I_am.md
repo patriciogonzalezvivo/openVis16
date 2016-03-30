@@ -82,7 +82,7 @@ I working at Mapzen as a graphic engineer.
 
 --
 
-<img src='imgs/labels05.gif' style='max-width: 40%;'> <img src='imgs/labels03.gif' style='max-width: 60%;'>
+<img src='imgs/labels05.gif' style='width: 40%;'> <img src='imgs/labels03.gif' style='width: 50%;'>
 
 [Experiments on **3D Labels** (C++)](https://vimeo.com/107190391)
 

@@ -1,15 +1,17 @@
 <!-- .slide: data-background="#000000" -->
-### Enhancing your maps & visualizations with
+<span style='font-size: 31px; font-weight: 300; color: white; text-transform: uppercase;'> Enhancing your maps & visualizations with </span>
 
-# WebGL GLSL Shaders
+<span style='font-size: 66px; font-weight: 400; color: white; text-transform: uppercase;'> WebGL GLSL Shaders</span>
 
-<canvas class='sandbox' data-fragment-url='shaders/160302022724.frag' width='1200px' height='300px' style='width: 90%; height: 40%; margin: 60px'></canvas>
 
-<span style='font-size: 16px; font-weight: 100; color: white;'> by </span>  **Patricio Gonzalez Vivo**
+<!-- <canvas class='sandbox' data-fragment-url='shaders/160302022724.frag' width='1200px' height='300px' style='width: 90%; height: 40%; margin: 60px'></canvas> -->
 
-<span style='font-size: 20px; font-weight: 100; color: white; line-height: 1;'> patricio.io | @patriciogv </span>
+<div style="margin-top: 100px;">
+<span style='font-size: 16px; font-weight: 100; color: white;'> by </span>  <span style='font-weight: 300; color: white;'> Patricio Gonzalez Vivo </span> 
+</div>
 
-<span style='font-size: 20px; font-weight: 100; color: white; line-height: 1;'> mapzen.com | @mapzen </span> 
+<p style='font-size: 16px; font-weight: 100; color: white; line-height: 1; padding: 0px; margin: 5px; margin-top: 20px;'> patricio.io | @patriciogv </p>
+<p style='font-size: 16px; font-weight: 100; color: white; line-height: 1; padding: 0px; margin: 5px;'> mapzen.com | @mapzen </p> 
 
 ---
 
