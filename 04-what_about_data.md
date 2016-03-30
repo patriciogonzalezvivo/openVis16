@@ -44,20 +44,6 @@ asociated with color. Those positions get connected in triangles. And their colo
 Note:
 Images are apply to the geometry, like fabric to canvas
 
---
-
-![](http://thebookofshaders.com/14/01.jpg)
-
-Note:
-like fabric
-
---
-
-![](http://thebookofshaders.com/14/03.jpg)
-
-Note:
-to a canvas
-
 ---
 
 <!-- .slide: data-background="#020303" -->
@@ -102,18 +88,11 @@ Well, remember that the GPU only thing you can upload to the GPU memory are Geom
 
 --
 
-![](http://thebookofshaders.com/14/01.jpg)
-
-Note:
-So I can use the Images
-
---
-
 <!-- .slide: data-background="#2E2A27" -->
 ![](imgs/roll.jpg)
 
 Note:
-as the a partiture... like pianola roll  
+So I can use the Images as the a partiture... like pianola roll  
 
 --
 
