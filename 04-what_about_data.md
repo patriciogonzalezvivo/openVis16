@@ -205,7 +205,22 @@ This is how the image looks
 
 --
 
+<!-- .slide: data-background="#000000" -->
 <canvas class='sandbox fit' data-fragment-url='shaders/datastream-texture.frag' data-textures='https://cdn.rawgit.com/tangrams/WeatherOverTime/gh-pages/data/data.png' width='1400px' height='600px' ></canvas>
+
+--
+
+<!-- .slide: data-background="#000000" -->
+<canvas class='sandbox fit' data-fragment-url='shaders/datastream-texture01.frag' data-textures='https://cdn.rawgit.com/tangrams/WeatherOverTime/gh-pages/data/data.png' width='1400px' height='600px' ></canvas>
+
+--
+
+<!-- .slide: data-background="#000000" -->
+<canvas class='sandbox fit' data-fragment-url='shaders/10print-texture.frag' data-textures='https://cdn.rawgit.com/tangrams/WeatherOverTime/gh-pages/data/data.png' width='800px' height='600px' ></canvas>
+
+--
+
+<canvas class='sandbox fit' data-fragment-url='shaders/iching-texture.frag' data-textures='https://cdn.rawgit.com/tangrams/WeatherOverTime/gh-pages/data/data.png' width='500px' height='500px' ></canvas>
 
 ---
 
@@ -219,6 +234,9 @@ also feel free to DM-me on twitter @patriciogv
 --
 
 ---
+
+
+<canvas class='sandbox fit' data-fragment-url='shaders/iching-texture.frag' data-textures='https://cdn.rawgit.com/tangrams/WeatherOverTime/gh-pages/data/data.png' width='300px' height='300px' ></canvas>
 
 ## Thank you
 
