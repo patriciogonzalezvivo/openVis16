@@ -216,6 +216,11 @@ This is how the image looks
 --
 
 <!-- .slide: data-background="#000000" -->
+<canvas class='sandbox fit' data-fragment-url='shaders/fractalInvaders.frag' data-textures='https://cdn.rawgit.com/tangrams/WeatherOverTime/gh-pages/data/data.png' width='800px' height='600px' ></canvas>
+
+--
+
+<!-- .slide: data-background="#000000" -->
 <canvas class='sandbox fit' data-fragment-url='shaders/10print-texture.frag' data-textures='https://cdn.rawgit.com/tangrams/WeatherOverTime/gh-pages/data/data.png' width='800px' height='600px' ></canvas>
 
 --
