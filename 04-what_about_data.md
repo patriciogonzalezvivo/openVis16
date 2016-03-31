@@ -1,34 +1,17 @@
-![](imgs/pipeline-v2.png)
-
-CPU **>** GPU Memory **>** Render Pipeline **>** Screen
+![](imgs/bottlenek.png)
 
 Note:
 So let's get serious and speak about cost. Let's have an adult conversation about efficiency...
-WebGL render stuff fast. Why? because it is his own processing unit that runs multiple threats in parallel... right?
-For that need to manage his own resolrse. Those resorses have to be uploaded in the GPU memory.
 
-What are those resources... esentially geometries and textures
-
---
-
-![](http://thebookofshaders.com/03/08.png)
-
-Note:
 Passing data from the CPU to the GPU is one of the most important the bottle necs of the pipeline.
-The more calls you make, the less fast your engine goes. 
-- Like an ikea furniture
-- 
-Imagine it as....
-The name of the game is don't disturb the GPU, let it do his game non stop.
-For that their resources are separate... 
-Think more metaphors
 
---
+WebGL render stuff fast. Why? because it is his own processing unit that runs multiple threats in parallel... right?
+The more calls you make, the less fast your engine goes.
+For that is convenient to have all the resources loaded on the GPU memory before start the job.
 
-![](http://thebookofshaders.com/14/02.jpg)
+What are those resources can be store on the GPU... esentially geometries and textures
 
-Note:
-Geometries are points
+Like a ship in a bottle, you don't want to be passing things constantly... you upload your resources and then work inside the bottle.
 
 --
 
@@ -92,22 +75,25 @@ Well, remember that the GPU only thing you can upload to the GPU memory are Geom
 ![](imgs/roll.jpg)
 
 Note:
-So I can use the Images as the a partiture... like pianola roll  
+So I can use the image as a "played piano roll". Each satellite, like a each key on the piano will read one line of the image. But instead of the binarry format of the roll... will look for a position incoded in color.
 
 --
 
-<img class='fit' src='imgs/texture.png' style='height: 600px;'>
+![](imgs/texture.png)
 
 Note:
-I can encode the position of moving objects into series of colors, each satellite (which have a geometry... ) will read a different line of this partiture.
+This is how it looks. Each row contain the future positions of a satellite in the next following hour.
+Each pixel is encode a big number with pressition enought to display it in the exact locating it will be.
+The first part of the screen are for the longitudes while the second is latitud.
+Each satelitte just need to read in the right row at the right offset on time to know their exact location.
 
 --
 
-![](imgs/250satsJson.png) ![](imgs/250satsImg.png)
+![](imgs/250sats-diff.png)
 
 --
 
-![](imgs/1600satsJson.png) ![](imgs/1600satsImg.png)
+![](imgs/1600sats-diff.png)
 
 --
 
@@ -173,23 +159,23 @@ In the same way stars from far far away
 
 Note:
 send us their information of their quimical composition in the light the produce...
+I hae one more example of this technique that is common on video games, but I'm applying to data visualization on maps...
 
 ---
 
-**~1600** stations  <!-- {_class="fragment"} -->
+**~1700** stations  <!-- {_class="fragment"} -->
 **x** **40** days  <!-- {_class="fragment"} -->
 (**960** hs)  <!-- {_class="fragment"} -->
 **=** **1,536,000** samples  <!-- {_class="fragment"} -->
 
 Note:
-So I want to show you how eficient this technique can be.
-So I start parsin NOAA METAR's for all the US.
-That's about 1700 stations that report around every hour.
-I have been doing this
+I have been collecting NOAA METAR's for all US weather stations the last weeks.
 
---
+Every day I have a raspberrypi fetching the last 24 cycles of 1700 stations that report around every hour.
+The raspberry pi download the METAR text files from NOAA FTP server and parse it into JSON that store for each day.
+Then with another script enconde all those JSON files for each day into a single image.
 
-![](https://rawgit.com/tangrams/WeatherOverTime/gh-pages/data/data.png)
+That's arround a millon an a half samples.
 
 --
 
@@ -203,7 +189,14 @@ I have been doing this
 (BLUE) <!-- {_class="fragment"} -->
 
 Note:
-For each record I'm only storing temperature, Wind speed and wind direction
+For each record I'm storing the temperature, Wind speed and wind direction in the RED, GREEN and BLUE channels of a picture.
+
+--
+
+![](https://rawgit.com/tangrams/WeatherOverTime/gh-pages/data/data.png)
+
+Note:
+This is how the image looks
 
 --
 
@@ -213,6 +206,11 @@ For each record I'm only storing temperature, Wind speed and wind direction
 ---
 
 [patriciogonzalezvivo.github.io/**openVis16**](http://patriciogonzalezvivo.github.io/openVis16/)
+
+Note:
+So here is this presentation.
+I'm going to be around the next following days, I will love to talk more about this.
+also feel free to DM-me on twitter @patriciogv
 
 --
 

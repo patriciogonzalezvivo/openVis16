@@ -1,5 +1,5 @@
 
-how to applied **shaders** to **map**?
+how to apply **shaders** to a **map**?
 
 Note:
 So, how shaders are applied to maps?
@@ -13,7 +13,7 @@ So, how shaders are applied to maps?
 
 Note:
 Well in Mapzen we have a webGL engine call Tangram.
-It takes vector tiles....
+It takes vector tiles from OSM data (shout out to OSM contributors)....
 
 ---
 
@@ -47,5 +47,6 @@ and pass to the GPU to render to produce maps like the one I show you at the beg
 <iframe class='fit' width="100%" height="100%" style='min-height: 1000px;' data-src="https://mapzen.com/tangram/play/?scene=https://rawgit.com/tangrams/tangram-sandbox/gh-pages/styles/default.yaml"></iframe>
 
 Note:
-This is TangramPlay, a tool I made with Lou Hang to code the scene files we use for tangram.
-You can see is very similar to other style guides, like for tilmil or cartoCSS
+This is TangramPlay, a tool we made with Lou Huang to live code the scene files we use for tangram.
+Lou an amazing UI engineer and have push this into an awesome tool to work with.
+You can see is very similar to other style guides, like for tilmil or cartoCSS.

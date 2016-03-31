@@ -2,7 +2,7 @@
 What's a **shader?**
 
 Note:
-Enought of introductions... What's a shader?
+but... What's a shader?
 
 --
 
@@ -39,7 +39,7 @@ Shaders are small “C-like” programs that **executed a main single function i
 
 --
 
-![](imgs/gutenpress.jpg)
+![](imgs/gutenpress.png)
 
 Note:
 Shaders are for graphic developer, what the **Gutenberg Press** was for books authors.
@@ -71,6 +71,8 @@ It need to calculate every single pixels of it
 at 60 mHz <!-- {_class="fragment"} -->
 is **28,800,000** <!-- {_class="fragment"} -->
 
+calculations per second <!-- {_class="fragment"} -->
+
 --
 
 2560x1600 px = 
@@ -78,6 +80,8 @@ is **28,800,000** <!-- {_class="fragment"} -->
 
 at 60 mHz <!-- {_class="fragment"} -->
 is **245,760,000** <!-- {_class="fragment"} -->
+
+calculations per second <!-- {_class="fragment"} -->
 
 --
 

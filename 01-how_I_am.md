@@ -78,7 +78,7 @@ or follow me at patriciogv
 [mapzen.com](http://mapzen.com) | [@mapzen](https://twitter.com/mapzen)
 
 Note:
-I working at Mapzen as a graphic engineer.
+I have the priviledge of be part of an amazing team of profesionals at Mapzen.
 
 --
 
@@ -87,13 +87,16 @@ I working at Mapzen as a graphic engineer.
 [Experiments on **3D Labels** (C++)](https://vimeo.com/107190391)
 
 Note:
-this are some of some personal project I have done there the last year an a half
+I work as a graphic engineer, pushing the limits of our tools. I have work on experiments like this 3D labels
 
 --
 
 <img src='imgs/pointclouds-01a.gif' style='max-height: 359px;'> <img src='imgs/pointclouds-09.png' style='max-height: 359px;'> <img src='imgs/pointclouds-11.gif' style='max-height: 359px;'> <img src='imgs/pointclouds-13.gif' style='max-height: 359px;'>
 
 [Experiment on LIDAR + SfM + OpenStreetMap (Python/C++)](https://mapzen.com/blog/point-clouds)
+
+Note:
+or this experiment about mixing LIDAR data with Structure from Motion point clouds from images with openStreetMap data.
 
 --
 
@@ -156,10 +159,12 @@ Terrarium experiments
 
 Note:
 You can find more about Mapzen in mapzen.com
+All our work is 100% open source and all our services are free. So sign up for API keys, we will be glad to help and assist you on using them.
 
 --
 
 @**mapzen**
 
 Note:
-or follow us at @mapzen
+also you can follow us at @mapzen
+So... all that maps that I just show are made with shaders.
