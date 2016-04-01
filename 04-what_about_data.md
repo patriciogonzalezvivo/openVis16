@@ -203,29 +203,19 @@ This is how the image looks
 <!-- .slide: data-background="#A8B3B1" -->
 <iframe class='fit' width="100%" height="100%" style='min-height: 600px; height: 100%;' data-src="http://tangrams.github.io/WeatherOverTime/"></iframe>
 
---
-
-<!-- .slide: data-background="#000000" -->
+<!-- 
 <canvas class='sandbox fit' data-fragment-url='shaders/datastream-texture.frag' data-textures='https://cdn.rawgit.com/tangrams/WeatherOverTime/gh-pages/data/data.png' width='1400px' height='600px' ></canvas>
 
---
 
-<!-- .slide: data-background="#000000" -->
 <canvas class='sandbox fit' data-fragment-url='shaders/datastream-texture01.frag' data-textures='https://cdn.rawgit.com/tangrams/WeatherOverTime/gh-pages/data/data.png' width='1400px' height='600px' ></canvas>
 
---
 
-<!-- .slide: data-background="#000000" -->
 <canvas class='sandbox fit' data-fragment-url='shaders/fractalInvaders.frag' data-textures='https://cdn.rawgit.com/tangrams/WeatherOverTime/gh-pages/data/data.png' width='800px' height='600px' ></canvas>
 
---
 
-<!-- .slide: data-background="#000000" -->
 <canvas class='sandbox fit' data-fragment-url='shaders/10print-texture.frag' data-textures='https://cdn.rawgit.com/tangrams/WeatherOverTime/gh-pages/data/data.png' width='800px' height='600px' ></canvas>
 
---
-
-<canvas class='sandbox fit' data-fragment-url='shaders/iching-texture.frag' data-textures='https://cdn.rawgit.com/tangrams/WeatherOverTime/gh-pages/data/data.png' width='500px' height='500px' ></canvas>
+<canvas class='sandbox fit' data-fragment-url='shaders/iching-texture.frag' data-textures='https://cdn.rawgit.com/tangrams/WeatherOverTime/gh-pages/data/data.png' width='500px' height='500px' ></canvas> -->
 
 ---
 
