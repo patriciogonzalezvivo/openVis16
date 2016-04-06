@@ -20,24 +20,24 @@
 Note:
 Welcome to an **universe of procedural random**...
 
-That's not totally true... the buildings geometry, the roads and the water lines comes from OpenStreetMap... 
+Well... the buildings geometry, the roads and the water lines comes from OpenStreetMap... 
 Carefully curated and chopped into tiles in Mapzen's servers... 
-tesalated and extruded on Tangram JS... our 2D/3D webgl map engine. 
+tessalated and extruded on Tangram... our 2D/3D map engine. 
 
 the rest...
 
 The **grid**, the **numbers**, the **patterns**, the **pulsing tiles**, the **movement of the camera**...
 all that is constructed in real time directly by the graphic card of this computer.
 
-The language to program directly on the graphic card is call shaders. Is a blend of C... with some native mathematical functions. 
-Because is a low level language is very powerfull... but it have a very minimal API. 
+The language to program directly on the graphic card is call shaders. A blend of C... with some native mathematical functions. 
+Because is a low level language is very powerfull... but it was a very minimal API. 
 
 For example there is no random. So in order to make this patterns I use this functions...
 
 ---
 
 ```glsl
-            float pseudo_random = fract(sin(time) * 43758.5453123);
+float pseudo_random = fract(sin(time) * 43758.5453123);
 ```
 
 <a href="http://thebookofshaders.com/10/" style='font-size: .5em;' target="_blank">**+** information on pseudo random on shaders</a>

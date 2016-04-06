@@ -49,15 +49,6 @@ width a passion for shaders.
 
 --
 
-# I ♥ 
-
-##GLSL
-
-Note:
-Which I will share later.
-
---
-
 **patricio**.io
 
 Note:
@@ -168,3 +159,13 @@ All our work is 100% open source and all our services are free. So sign up for A
 Note:
 also you can follow us at @mapzen
 So... all that maps that I just show are made with shaders.
+
+--
+
+# I ♥ 
+
+##GLSL
+
+Note:
+All this work that I show have one or another way shaders
+I love them

@@ -3,15 +3,15 @@
 sources:
     osm:
         type: TopoJSON
-        url:  //vector.mapzen.com/osm/all/{z}/{x}/{y}.topojson?api_key=vector-tiles-xOfUOo4
-scene:
-    background:
-        color: black
+        url:  //vector.mapzen.com/osm/all/{z}/{x}/{y}.topojson?api_key=vector-tiles-JUsa0Gc
 cameras:
     camera1:
         type: perspective
         focal_length: [[16, 2], [20, 6]] # pairs of [zoom, focal len]
         vanishing_point: [-250, -250] # relative to center of screen, in pixels
+scene:
+    background:
+        color: black
 styles:
     tilt:
         animated: true
@@ -19,8 +19,6 @@ styles:
             defines:
                 PI: 3.1415926535897932384626433832795
                 HALF_PI: 1.5707963267948966192313216916398
-            uniforms:
-                u_offset: [0,0]
             blocks:
                 global: |
                     mat3 rotateX3D(float phi){
@@ -36,19 +34,14 @@ styles:
                             vec3(0.,0.,1.));
                     }
                 position: |
-                    // position.xyz = rotateX3D(abs(cos(u_offset.x))) * rotateZ3D(cos(u_offset.y)) * position.xyz;
-                    float z = smoothstep(0.7,1.,max((u_map_position.z)/20.,0.));
-                    position.xyz = rotateX3D(z*HALF_PI) * rotateZ3D(cos(u_offset.y)*z) * position.xyz;
-                    position.y -= u_offset.x*(z*100.);
-                    // position.z -= u_offset.x*(z*100.);
+                    float t = u_time*0.1; 
+                    float z = smoothstep(0.7,1.,max((u_map_position.z)/20.,0.)*0.9);
+                    position.xyz = rotateX3D(z*HALF_PI*1.5) * rotateZ3D(sin(t)*PI*z) * position.xyz;
     lin:
          base: lines
          mix: tilt  
     space-tile:
         shaders:
-            defines:
-                TILE_SCALE: 0.0002445
-                NORMALIZED_SHORT(x): (x * 32767.)
             blocks:
                 global: |
                     // Variant to be add to both vertex and fragments shaders
@@ -57,12 +50,12 @@ styles:
                     // Get the coordinates in tile space
                     // ================================
                     vec2 getTileCoords () {
-                        return fract(v_pos.xy*TILE_SCALE);
+                        return fract(v_pos.xy);
                     }
 
                 position: |
                     // Normalize the attribute position of a vertex
-                    v_pos = NORMALIZED_SHORT(a_position.xyz);
+                    v_pos = modelPosition().xyz;
     generative-random:
         shaders:
             blocks:
@@ -166,7 +159,7 @@ styles:
                     color.g = randomSerie(st.y, freq, t);
                     color.b = randomSerie(st.y, freq, t-offset);
                     color.rgb *= step(0.1,st.x)-step(0.9,st.x);
-    simpleGrid:
+    simple-grid:
         base: polygons
         mix: [grid, generative-random]
         animated: false
@@ -179,7 +172,7 @@ styles:
                     float time_i = floor(t);
                     float time_f = fract(t);
                     color.rgb += step(0.9,random(st+time_i))*(1.0-time_f);
-    numericGrid:
+    numeric-grid:
         base: polygons
         mix: [grid, generative-random]
         animated: true
@@ -303,6 +296,7 @@ styles:
                             float t = mod(u_time*20.*(1.+r*.5)+(4324.*amount),500.);
                             vec2 head = vec2(mod(t,50.), floor(t/50.));
 
+                            vec2 offset = vec2(0.1,0.);
                             float pct = 1.0;
                             pct *= step(10.-head.y,ipos.y);// Y
                             pct += (1.0-step(head.x,ipos.x))*step(10.-head.y,ipos.y+1.);   // X
@@ -310,7 +304,9 @@ styles:
                             color.rgb = vec3(pct);
                             
                             // Assign a random value base on the integer coord
-                            color.rgb *= random(floor(st+vel));
+                            color.r *= random(floor(st+vel+offset));
+                            color.g *= random(floor(st+vel));
+                            color.b *= random(floor(st+vel-offset));
 
                             color.rgb = smoothstep(0.,amount,color.rgb*color.rgb);
 
@@ -318,7 +314,7 @@ styles:
                             color.rgb *= step(.1,fract(st.x+vel.x))*step(.1,fract(st.y+vel.y));
                         } else {
                             // Running lines
-                            vec2 st = vec2(v_texcoord.x,v_world_position.z*0.005); 
+                            vec2 st = vec2(v_texcoord.x,worldPosition().z*0.005); 
                             vec2 grid = vec2(100.0,20.);
                             st *= grid;
 
@@ -329,7 +325,11 @@ styles:
                             vel *= vec2(-1.,0.0) * random(1.0+ipos.y); // direction
 
                             // Assign a random value base on the integer coord
-                            color.rgb = vec3(pattern(st,vel,amount));
+                            vec2 offset = vec2(0.1,0.);
+
+                            color.r = pattern(st+offset,vel,amount);
+                            color.g = pattern(st,vel,amount);
+                            color.b = pattern(st-offset,vel,amount);
                             color.rgb *= step(0.2,fpos.y);
                         }
                     } else {
@@ -339,7 +339,7 @@ layers:
     earth:
         data: { source: osm }
         draw:
-            simpleGrid:
+            simple-grid:
                 order: 0
                 color: [0.362,0.362,0.362]
     landuse:
@@ -352,7 +352,7 @@ layers:
     water:
         data: { source: osm }
         draw:
-            numericGrid:
+            numeric-grid:
                 order: 3
                 color: [1.000,1.000,1.000]
             outline:
