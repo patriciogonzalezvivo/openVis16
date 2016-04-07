@@ -1,3 +1,7 @@
+How to use **shaders** to display **data** on a map?
+
+--
+
 ![](imgs/bottlenek.png)
 
 Note:
@@ -86,10 +90,6 @@ This is how it looks. Each row contain the future positions of a satellite in th
 Each pixel is encode a big number with pressition enought to display it in the exact locating it will be.
 The first part of the screen are for the longitudes while the second is latitud.
 Each satelitte just need to read in the right row at the right offset on time to know their exact location.
-
---
-
-![](imgs/250sats-diff.png)
 
 --
 
@@ -203,19 +203,23 @@ This is how the image looks
 <!-- .slide: data-background="#A8B3B1" -->
 <iframe class='fit' width="100%" height="100%" style='min-height: 600px; height: 100%;' data-src="http://tangrams.github.io/WeatherOverTime/"></iframe>
 
+--
+
+<img src'https://rawgit.com/tangrams/WeatherOverTime/gh-pages/data/data.png' height="90%"></img>
+
 <!-- 
 <canvas class='sandbox fit' data-fragment-url='shaders/datastream-texture.frag' data-textures='https://cdn.rawgit.com/tangrams/WeatherOverTime/gh-pages/data/data.png' width='1400px' height='600px' ></canvas>
 
 
-<canvas class='sandbox fit' data-fragment-url='shaders/datastream-texture01.frag' data-textures='https://cdn.rawgit.com/tangrams/WeatherOverTime/gh-pages/data/data.png' width='1400px' height='600px' ></canvas>
+<canvas class='sandbox fit' data-fragment-url='shaders/datastream-texture01.frag' data-textures='https://cdn.rawgit.com/tangrams/WeatherOverTime/gh-pages/data/data.png' width='1400px' height='600px' ></canvas> -->
 
-
-<canvas class='sandbox fit' data-fragment-url='shaders/fractalInvaders.frag' data-textures='https://cdn.rawgit.com/tangrams/WeatherOverTime/gh-pages/data/data.png' width='800px' height='600px' ></canvas>
-
+--
 
 <canvas class='sandbox fit' data-fragment-url='shaders/10print-texture.frag' data-textures='https://cdn.rawgit.com/tangrams/WeatherOverTime/gh-pages/data/data.png' width='800px' height='600px' ></canvas>
 
-<canvas class='sandbox fit' data-fragment-url='shaders/iching-texture.frag' data-textures='https://cdn.rawgit.com/tangrams/WeatherOverTime/gh-pages/data/data.png' width='500px' height='500px' ></canvas> -->
+--
+
+<canvas class='sandbox fit' data-fragment-url='shaders/iching-texture.frag' data-textures='https://cdn.rawgit.com/tangrams/WeatherOverTime/gh-pages/data/data.png' width='500px' height='500px' ></canvas> 
 
 ---
 

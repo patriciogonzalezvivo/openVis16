@@ -26,6 +26,8 @@ Reveal.initialize({
 function newSection (event) {
     var section = event.currentSlide || event;
 
+    window.glslCanvases = [];
+
     checkFit(section);
     checkSandbox(section);
 }
@@ -40,7 +42,7 @@ function checkFit (section) {
 }
 
 function checkSandbox (section) {
-    var list = document.getElementsByClassName('sandbox');
+    var list = section.getElementsByClassName('sandbox');
     if (list.length>0) {
         window.glslCanvases = [];
         for (var i = 0; i < list.length; i++){

@@ -28,11 +28,9 @@ Note:
 
 --
 
-![](imgs/Skyline01.png)
+<!-- ![](imgs/Skyline01.png)
 
-[**Skyline I**](http://patriciogonzalezvivo.com/2014/skylines/skylines.php?v=01)
-
---
+[**Skyline I**](http://patriciogonzalezvivo.com/2014/skylines/skylines.php?v=01) -->
 
 ![](imgs/Skyline02.png)
 
