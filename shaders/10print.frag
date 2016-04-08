@@ -1,21 +1,15 @@
 // Author: Patricio Gonzalez Vivo
-// Title: 10 Print 
+// Title: 10 PRINT
 
 #ifdef GL_ES
 precision mediump float;
 #endif
 
-uniform sampler2D u_tex0;
-uniform vec2 u_tex0Resolution;
-
 uniform vec2 u_resolution;
-uniform vec2 u_mouse;
 uniform float u_time;
 
-float random (in vec2 st) {
-    // return fract(sin(dot(st.xy, vec2(12.9898,78.233)))*43758.5453123);
-    return texture2D(u_tex0,fract(st/u_tex0Resolution)).z;
-    // return fract(sin(dot(texture2D(u_tex0,fract(st/u_tex0Resolution)).xyz,vec3(-0.107,0.662,-0.336)))*43758.5453123);
+float random (in vec2 st) { 
+    return fract(sin(dot(st.xy, vec2(12.9898,78.233)))*43758.5453123);
 }
 
 void main() {
@@ -35,7 +29,7 @@ void main() {
 
     float color = 0.0;
     if (ipos.y > 0.0 || ipos.x < fract(time)*scale*ratio) {
-        color = smoothstep(tile.x-0.25,tile.x,tile.y)-smoothstep(tile.x,tile.x+0.25,tile.y);
+        color = smoothstep(tile.x-0.2,tile.x,tile.y)-smoothstep(tile.x,tile.x+0.2,tile.y);
     }    
 
     gl_FragColor = vec4(vec3(color),1.0);

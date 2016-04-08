@@ -205,21 +205,44 @@ This is how the image looks
 
 --
 
-<img src'https://rawgit.com/tangrams/WeatherOverTime/gh-pages/data/data.png' height="90%"></img>
+<!-- .slide: data-background="#A8B3B1" -->
+<canvas class='sandbox fit' data-fragment-url='shaders/datastream-texture.frag' data-textures='https://cdn.rawgit.com/tangrams/WeatherOverTime/gh-pages/data/data.png' width='800px' height='600px' ></canvas>
 
-<!-- 
-<canvas class='sandbox fit' data-fragment-url='shaders/datastream-texture.frag' data-textures='https://cdn.rawgit.com/tangrams/WeatherOverTime/gh-pages/data/data.png' width='1400px' height='600px' ></canvas>
-
-
-<canvas class='sandbox fit' data-fragment-url='shaders/datastream-texture01.frag' data-textures='https://cdn.rawgit.com/tangrams/WeatherOverTime/gh-pages/data/data.png' width='1400px' height='600px' ></canvas> -->
+Temperature and Wind Data
 
 --
 
-<canvas class='sandbox fit' data-fragment-url='shaders/10print-texture.frag' data-textures='https://cdn.rawgit.com/tangrams/WeatherOverTime/gh-pages/data/data.png' width='800px' height='600px' ></canvas>
+<!-- .slide: data-background="#000000" -->
+<canvas class='sandbox fit' data-fragment-url='shaders/10print.frag' data-textures='https://cdn.rawgit.com/tangrams/WeatherOverTime/gh-pages/data/data.png' width='800px' height='600px' ></canvas>
+
+10 Print (pseudo random)
+
+--
+
+<!-- .slide: data-background="#000000" -->
+<canvas class='sandbox fit' data-fragment-url='shaders/10print-wind_dir.frag' data-textures='https://cdn.rawgit.com/tangrams/WeatherOverTime/gh-pages/data/data.png' width='800px' height='600px' ></canvas>
+
+10 Print (wind direction)
+
+--
+
+<!-- .slide: data-background="#000000" -->
+<canvas class='sandbox fit' data-fragment-url='shaders/10print-wind_speed.frag' data-textures='https://cdn.rawgit.com/tangrams/WeatherOverTime/gh-pages/data/data.png' width='800px' height='600px' ></canvas>
+
+10 Print (wind speed)
+
+--
+
+<!-- .slide: data-background="#000000" -->
+<canvas class='sandbox fit' data-fragment-url='shaders/10print-wind_speed.frag' data-textures='https://cdn.rawgit.com/tangrams/WeatherOverTime/gh-pages/data/data.png' width='800px' height='600px' ></canvas>
+
+10 Print (temperature)
 
 --
 
 <canvas class='sandbox fit' data-fragment-url='shaders/iching-texture.frag' data-textures='https://cdn.rawgit.com/tangrams/WeatherOverTime/gh-pages/data/data.png' width='500px' height='500px' ></canvas> 
+
+Wind I Ching 
 
 ---
 

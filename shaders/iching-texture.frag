@@ -13,7 +13,9 @@ uniform vec2 u_mouse;
 uniform float u_time;
 
 float random (in vec2 st) {
-    return fract(sin(dot(texture2D(u_tex0,fract(st/u_tex0Resolution)).xyz,vec3(-0.107,0.662,-0.336)))*43758.5453123);
+    // return texture2D(u_tex0,fract(st/u_tex0Resolution)).z;
+    return fract(sin(dot(texture2D(u_tex0,fract(st/u_tex0Resolution)).yz,vec2(0.107,0.662)))*43758.5453123);
+    // return fract(sin(dot(texture2D(u_tex0,fract(st/u_tex0Resolution)).xyz,vec3(-0.107,0.662,-0.336)))*43758.5453123);
 }
 
 float rect(vec2 _st, vec2 _size){
