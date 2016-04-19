@@ -14,7 +14,11 @@
 ---
 
 <!-- .slide: data-background="#000000" -->
-<iframe class='fit' width='100%' height='100%' style='min-height: 1000px;' data-src='tangram.html?style=randomCity&animate=true#15/40.7076/-74.0146'></iframe> 
+<iframe class='fit' width='100%' height='100%' style='min-height: 1000px;' data-src='tangram.html?style=randomCity&animate=true#15/40.7076/-74.0146'></iframe>
+
+*RandomCity*
+
+[* Inspired on Ryoji Ikeda work](http://www.ryojiikeda.com/)
 
 
 Note:
@@ -63,9 +67,11 @@ Note:
 
 --
 
-<!-- ![](imgs/Skyline01.png)
+![](imgs/Skyline01.png)
 
-[**Skyline I**](http://patriciogonzalezvivo.com/2014/skylines/skylines.php?v=01) -->
+[**Skyline I**](http://patriciogonzalezvivo.com/2014/skylines/skylines.php?v=01)
+
+--
 
 ![](imgs/Skyline02.png)
 
@@ -79,6 +85,11 @@ Note:
 
 Note:
 width a passion for shaders. 
+
+--
+
+<!-- .slide: data-background="#000000" -->
+<iframe class='fit' width='100%' height='100%' style='min-height: 1000px;' data-src='http://player.thebookofshaders.com/?log=160301005406'></iframe> 
 
 --
 
@@ -106,12 +117,19 @@ Since almost two years ago, I have the priviledge of be part of an amazing team 
 
 --
 
+![](imgs/mapzen-team.gif)
+
+Note:
+Also I have the priviledge to work as a graphic engineer, pushing the limits of digital cartography, doing experiments like:
+
+--
+
 <img src='imgs/labels05.gif' style='width: 40%;'> <img src='imgs/labels03.gif' style='width: 50%;'>
 
 [Experiments on **3D Labels** (C++)](https://vimeo.com/107190391)
 
 Note:
-I work as a graphic engineer, pushing the limits of our tools. I have work on experiments like this 3D labels
+this 3D labels and way finding prototype
 
 --
 
@@ -137,7 +155,7 @@ or this experiment about mixing LIDAR data with Structure from Motion point clou
 <img src='imgs/matrix.png' style='width: 45%;'> <img src='imgs/tilt-tron.gif' style='width: 45%'>
 
 <!-- .slide: data-background="#000000" -->
-[Tangram styles (WebGL)](patriciogonzalezvivo.github.io/tangram-sandbox/)
+*Tangram styles (WebGL)*
 
 --
 
@@ -146,14 +164,14 @@ or this experiment about mixing LIDAR data with Structure from Motion point clou
 <img src='imgs/ikeda.gif' style='width: 45%;'> <img src='imgs/tilt-ikeda.gif' style='width: 45%;'>
 
 <!-- .slide: data-background="#000000" -->
-[Tangram styles (WebGL)](patriciogonzalezvivo.github.io/tangram-sandbox/)
+*Tangram styles (WebGL)*
 
 --
 
 <!-- .slide: data-background="#020513" -->
 <img src='imgs/iss00.jpg' style='width: 46%;'> <img src='imgs/iss01.jpg' style='width: 49%;'>
 
-[ISS from OSM](http://patriciogonzalezvivo.github.io/ISS/)
+*ISS from OSM*
 
 --
 
@@ -163,19 +181,19 @@ or this experiment about mixing LIDAR data with Structure from Motion point clou
 
 <img src='imgs/lineofsight-03.gif' style='width: 30%;'> <img src='imgs/lineofsight-04.gif' style='width: 30%;'> <img src='imgs/lineofsight-06.gif' style='width: 30%;'>
 
-[Line of Sight](http://patriciogonzalezvivo.github.io/LineOfSight/)
+*Line of Sight*
 
 --
 
 ![](imgs/terrarium00.png)
 
-Terrarium experiments
+*Terrarium experiments*
 
 --
 
 ![](imgs/terrarium01.png)
 
-Terrarium experiments
+*Terrarium experiments*
 
 --
 
@@ -211,8 +229,6 @@ What's a **shader?**
 Note:
 but... What's a shader?
 
---
-
 ---
 
 <iframe class='fit' width='100%' height='800px' data-src='http://thebookofshaders.com'></iframe>
@@ -220,8 +236,6 @@ but... What's a shader?
 Note:
 One year ago I start a long time project call The book of shaders, my goal with it is to explain what shader are and how they work.
 I'm going to use some of the **material** I use in the book to explain what they are but I highly encorage everybody interested on this subject to take a look to it.
-
---
 
 ---
 
@@ -389,9 +403,6 @@ how to apply **shaders** to a **map**?
 Note:
 So, how shaders are applied to maps?
 
---
-
-
 ---
 
 <iframe class='fit' width="100%" height="800px" data-src="tangram.html?style=tiles#2/0/0"></iframe>
@@ -412,6 +423,8 @@ extrude them into geometry
 <!-- .slide: data-background="#000000" -->
 <iframe class='fit' width="100%" height="100%" style='min-height: 1000px;' data-src="tangram.html?style=tilt-patterns-orig#15/40.7076/-74.0146"></iframe>
 
+[* Inspired on Texture.js patterns by Riccardo Scalco](https://riccardoscalco.github.io/textures/)
+
 Note:
 and pass to the GPU to render to produce maps like the one I show you at the beginning.
 
@@ -424,8 +437,6 @@ Note:
 and pass to the GPU to render to produce maps like the one I show you at the beginning.
 
 ---
-
-
 
 <!-- .slide: data-background="#26282C" -->
 <iframe class='fit' width="100%" height="100%" style='min-height: 1000px;' data-src="https://mapzen.com/tangram/play/?scene=https://rawgit.com/tangrams/tangram-sandbox/gh-pages/styles/default.yaml"></iframe>
@@ -475,7 +486,7 @@ Images are apply to the geometry, like fabric to canvas
 <!-- .slide: data-background="#020303" -->
 <iframe class='fit' width="100%" height="100%" style='min-height: 1000px;' data-src="http://patriciogonzalezvivo.github.io/LineOfSight/"></iframe>
 
-[LineOfSight](http://patriciogonzalezvivo.github.io/LineOfSight/)
+*LineOfSight*
 
 Note:
 When I was making LineOfSight I found my self in the dilema of how to update the position of 1500 moving targets wit precession.
@@ -642,6 +653,8 @@ This is how the image looks
 <!-- .slide: data-background="#EEEFF2" -->
 <iframe class='fit' width="100%" height="100%" style='min-height: 600px; height: 100%;' data-src="http://tangrams.github.io/WeatherOverTime/"></iframe>
 
+[github.com/**tangrams**/***WeatherOverTime***](https://github.com/tangrams/WeatherOverTime)
+
 ---
 
 [patriciogonzalezvivo.github.io/**openVis16**](http://patriciogonzalezvivo.github.io/openVis16/)
@@ -651,13 +664,9 @@ So here is this presentation.
 I'm going to be around the next following days, I will love to talk more about this.
 also feel free to DM-me on twitter @patriciogv
 
---
-
 ---
 
 ## Thank you
 
 [patricio.io](http://patricio.io) | [@patriciogv](https://twitter.com/patriciogv)
-
---
 
