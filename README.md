@@ -67,11 +67,16 @@ Note:
 
 --
 
-![](imgs/Skyline01.png)
+<!-- .slide: data-background="#000000" -->
+<img src='imgs/clouds-00.gif' style='max-width: 40%;'> <img src='imgs/clouds-04.gif' style='max-width: 40%;'> <img src='imgs/clouds-02.gif' style='max-width: 40%;'> <img src='imgs/clouds-03.gif' style='max-width: 40%;'>
 
-[**Skyline I**](http://patriciogonzalezvivo.com/2014/skylines/skylines.php?v=01)
+CLOUDS Documentary
 
 --
+
+<!-- ![](imgs/Skyline01.png)
+
+[**Skyline I**](http://patriciogonzalezvivo.com/2014/skylines/skylines.php?v=01) -->
 
 ![](imgs/Skyline02.png)
 
@@ -613,14 +618,19 @@ I hae one more example of this technique that is common on video games, but I'm 
 
 ---
 
+![](imgs/rpi.jpg)
+
+Note:
+I have been collecting US NOAA's Weather station for the last 7 weeks with my RaspberryPi
+
+--
+
 **~1700** stations  <!-- {_class="fragment"} -->
 **x** **40** days  <!-- {_class="fragment"} -->
 (**960** hs)  <!-- {_class="fragment"} -->
 **=** **1,536,000** samples  <!-- {_class="fragment"} -->
 
 Note:
-I have been collecting NOAA METAR's for all US weather stations the last weeks.
-
 Every day I have a raspberrypi fetching the last 24 cycles of 1700 stations that report around every hour.
 The raspberry pi download the METAR text files from NOAA FTP server and parse it into JSON that store for each day.
 Then with another script enconde all those JSON files for each day into a single image.
