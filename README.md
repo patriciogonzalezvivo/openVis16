@@ -67,16 +67,11 @@ Note:
 
 --
 
-<!-- .slide: data-background="#000000" -->
-<img src='imgs/clouds-00.gif' style='max-width: 40%;'> <img src='imgs/clouds-04.gif' style='max-width: 40%;'> <img src='imgs/clouds-02.gif' style='max-width: 40%;'> <img src='imgs/clouds-03.gif' style='max-width: 40%;'>
+![](imgs/Skyline01.png)
 
-CLOUDS Documentary
+[**Skyline I**](http://patriciogonzalezvivo.com/2014/skylines/skylines.php?v=01)
 
 --
-
-<!-- ![](imgs/Skyline01.png)
-
-[**Skyline I**](http://patriciogonzalezvivo.com/2014/skylines/skylines.php?v=01) -->
 
 ![](imgs/Skyline02.png)
 
@@ -94,7 +89,12 @@ width a passion for shaders.
 --
 
 <!-- .slide: data-background="#000000" -->
-<iframe class='fit' width='100%' height='100%' style='min-height: 1000px;' data-src='http://player.thebookofshaders.com/?log=160301005406'></iframe> 
+<img src='imgs/clouds-00.gif' style='max-width: 40%;'> <img src='imgs/clouds-04.gif' style='max-width: 40%;'> <img src='imgs/clouds-02.gif' style='max-width: 40%;'> <img src='imgs/clouds-03.gif' style='max-width: 40%;'>
+
+CLOUDS Documentary
+
+<!-- .slide: data-background="#000000" -->
+<!-- <iframe class='fit' width='100%' height='100%' style='min-height: 1000px;' data-src='http://player.thebookofshaders.com/?log=160301005406'></iframe>  -->
 
 --
 
@@ -392,6 +392,10 @@ We have just imagine the Graphic Computer unit, it's power and some of their lim
 
 ---
 
+editor.**thebookofshaders**.com
+
+--
+
 <!-- .slide: data-background="#36383C" -->
 <iframe class='fit' width='100%' height='800px' data-src='editor.html'></iframe>
 
@@ -442,6 +446,10 @@ Note:
 and pass to the GPU to render to produce maps like the one I show you at the beginning.
 
 ---
+
+mapzen.com/**tangram**/**play**/
+
+--
 
 <!-- .slide: data-background="#26282C" -->
 <iframe class='fit' width="100%" height="100%" style='min-height: 1000px;' data-src="https://mapzen.com/tangram/play/?scene=https://rawgit.com/tangrams/tangram-sandbox/gh-pages/styles/default.yaml"></iframe>
@@ -667,7 +675,7 @@ This is how the image looks
 
 ---
 
-[patriciogonzalezvivo.github.io/**openVis16**](http://patriciogonzalezvivo.github.io/openVis16/)
+[**patriciogonzalezvivo**.github.io/**openVis16**](http://patriciogonzalezvivo.github.io/openVis16/)
 
 Note:
 So here is this presentation.
